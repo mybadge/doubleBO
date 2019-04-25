@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import technologyBg from '../../statics/technology_bg.jpg'
+
 export const HomeWrapper = styled.div`
 	overflow: hidden;
 	width: 960px;
@@ -15,51 +17,197 @@ export const HomeLeft = styled.div`
 		width: 960px;
 		height: 220px;
 	}
-	.p {
-		width: 100%;
-		height: 64px;
-		display: box;
-		box-pack:center;
-		box-orient:vertical;
-		display: -webkit-box;
-		-webkit-box-pack:center;
-		-webkit-box-orient:vertical;
+	.center {
+		padding-top: 30px;
 		text-align: center;
+		color: green;
+		font-size: 35px;
+	}
+	p {
+		color: #ccc;
+		padding-top: 10px;
+		font-size: 15px;
+	}
+	.img_left {
+		width: 50%;
+		height: 250px;
 	}
 `;
 
-export const HomeRight = styled.div`
-	width: 280px;
+export const HomeProductRight = styled.div`
+	width: 50%;
+	height: 250px;
+	display: block;
 	float: right;
+	background: #313F4B;
+	color: white;
+
+	h3 {
+		font-size: 30px;
+		margin: 30px 20px 30px 20px;
+	}
+	h5 {
+		font-size: 14px;
+		margin: 20px 20px 20px 20px;
+	}
+`;
+
+export const Button = styled.a`
+	display: block;
+	margin-left: 20px;
+	padding-top: 6px;
+	width: 120px;
+	height: 20px;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+	text-decoration: none;
 `;
 
 export const TopicWrapper = styled.div`
 	overflow: hidden;
-	padding: 20px 0 10px 0;
-	margin-left: -18px;
+	padding: 40px 0 30px 0;
+	
 	border-bottom: 1px solid #dcdcdc;
+	display: flex;
+	flex-direction: row;
+	justfy-content: center;
+	
 `;
 
-export const TopicItem = styled.div`
-	float: left;
-	height: 32px;
-	line-height: 32px;
-	margin-left: 18px;
-	margin-bottom: 18px;
-	padding-right: 10px
-	background: #f7f7f7;
+export const TopicItem = styled.dl`
+
+	margin-left: 60px;
+	margin-bottom: 20px;
+	padding-left: 100px;
 	font-size: 14px;
 	color: #000;
-	border: 1px solid #dcdcdc;
+	text-align: center;
 	border-radius: 4px;
 	.topic-pic {
 		display: block;
-		float: left;
-		width: 32px;
-		height: 32px;
-		margin-right: 10px;
+		float: center;
 	}
 `;
+
+export const ProductCenter = styled.div`
+	margin: 30px auto 43px auto;
+	background: white;
+	width: 600px;
+	height: 280px;	
+	align: center;
+	padding-top: 30px;
+	.left {
+		height: 250px;
+		float: left;
+		padding-right: 10px; 
+	}
+
+	.right1 {
+		width: 185px;
+		height: 120px;
+		margin: 0px 5px 5px px;
+	}
+	.right2 {
+		float: right;
+		width: 185px;
+		height: 120px;
+		margin: 0px 0px 0px 0px;
+	}
+	.right3 {
+		width: 185px;
+		height: 123px;
+		margin: 5px 0px 0px 0px;
+		align: bottom;
+	}
+	.right4 {
+		float: right;
+		width: 185px;
+		height: 123px;
+		margin: 5px 0px 0px 0px;
+		align: bottom;
+	}
+	h2 {
+		display: block;
+		color: red;
+		padding-bottom: 10px;
+		p {
+			color: #ccc;
+			font-size: 10px;
+		}
+	}
+`;
+
+export const TechnologyWrapper = styled.div`
+	margin-top: -150px;
+	width: 960px;
+	height: 650px;
+	background-image: url(${technologyBg});
+	background-size: 1280px 580px;
+`
+
+export const TechonlogyCenter = styled.div`
+	h2 {
+		display: block;
+		color: red;
+		padding-bottom: 10px;
+		p {
+			color: #ccc;
+			font-size: 10px;
+		}
+	}
+	h3 {
+		font-size: 20px;
+		margin: 10px 0px 10px 0px;
+	}
+	h5 {
+		font-size: 12px;
+		margin: 10px 0px 10px 0px;
+	}
+	padding: 110px;
+    margin: 90px auto;
+	width: 600px;
+	height: 600px;
+	.content {
+		margin-top: -10px;
+		width: 100%;
+		height: 300px;
+		display: flex;
+		flex-direction: row;
+		justfy-content: center;
+	}
+	.imgLeft {
+		width: 300px;
+		height: 140px;
+		
+	}
+	.divLeft {
+		width: 300px;
+		height: 140px;
+		padding-top: 10px;
+		color: white;
+	}
+	.divRight {
+		width: 300px;
+		height: 140px;
+		padding-top: 10px;
+		padding-left: 10px;
+		color: white;
+	}
+	
+	.imgRight {
+		display: block;
+		width: 300px;
+		height: 140px;
+	}
+`
+
+export const NewsList = styled.div`
+
+`
+
 
 export const ListItem = styled.div`
 	overflow: hidden;

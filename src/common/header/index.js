@@ -16,8 +16,7 @@ import {
 	SearchInfoSwitch,
 	SearchInfoList,
 	SearchInfoItem,
-	Addition,
-	Button
+	Addition
 } from './style';
 
 class MyHeader extends Component {
@@ -79,8 +78,11 @@ class MyHeader extends Component {
 							<Link to='/login'><NavItem className='right'>登陆</NavItem></Link>
 					}
 					<NavItem className='right'>
-						<i className="iconfont">&#xe636;</i>
+						{/* <i className="iconfont">&#xe636;</i> */}
 					</NavItem>
+					
+				</Nav>
+				<Addition>
 					<SearchWrapper>
 						<CSSTransition
 							in={focused}
@@ -98,15 +100,13 @@ class MyHeader extends Component {
 						</i>
 						{this.getListArea()}
 					</SearchWrapper>
-				</Nav>
-				<Addition>
-					<Link to='/write'>
+					{/* <Link to='/write'>
 						<Button className='writting'>
 							<i className="iconfont">&#xe615;</i>
 							写文章
 						</Button>
 					</Link>
-					<Button className='reg'>注册</Button>
+					<Button className='reg'>注册</Button> */}
 				</Addition>
 			</HeaderWrapper>
 		);
