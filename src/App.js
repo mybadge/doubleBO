@@ -6,7 +6,7 @@ import Home from './pages/home';
 import Product from './pages/Product'
 import News from './pages/News'
 import Hr from './pages/Hr'
-import Contact from './pages/Contact'
+import About from './pages/About'
 import Detail from './pages/detail/loadable.js';
 import Login from './pages/login';
 import Write from './pages/write';
@@ -38,13 +38,13 @@ class App extends Component {
               <Route path='/product' exact component={Product}></Route>
               <Route path='/news' exact component={News}></Route>
               <Route path='/hr' exact component={Hr}></Route>
-              <Route path='/contact' exact component={Contact}></Route>
+              <Route path='/about' exact component={About}></Route>
 
             </Content>
 
             
             <Footer style={{height:64, background: '#999', textAlign: 'center', color: 'white'}}>
-                Ant Design ©2018 Created by mybadge
+                double bo Design ©2019 Created by mybadge
             </Footer>
           </Layout>
       	</BrowserRouter>

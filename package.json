@@ -16,9 +16,11 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
     "react-transition-group": "^2.3.1",
+    "react-virtualized": "^9.21.0",
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.3.0",
+    "reqwest": "^2.0.5",
     "styled-components": "^3.3.2"
   },
   "scripts": {

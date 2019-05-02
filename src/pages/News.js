@@ -1,72 +1,156 @@
 import React, { PureComponent } from 'react';
 
-import { Table, Divider, Tag } from 'antd';
+import {
+  List, message, Avatar, Spin,
+} from 'antd';
 
-const columns = [{
-  title: 'Name',
-  dataIndex: 'name',
-  key: 'name',
-  render: text => <a href="javascript:;">{text}</a>,
-}, {
-  title: 'Age',
-  dataIndex: 'age',
-  key: 'age',
-}, {
-  title: 'Address',
-  dataIndex: 'address',
-  key: 'address',
-}, {
-  title: 'Tags',
-  key: 'tags',
-  dataIndex: 'tags',
-  render: tags => (
-    <span>
-      {tags.map(tag => {
-        let color = tag.length > 5 ? 'geekblue' : 'green';
-        if (tag === 'loser') {
-          color = 'volcano';
+import reqwest from 'reqwest';
+
+import WindowScroller from 'react-virtualized/dist/commonjs/WindowScroller';
+import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
+import VList from 'react-virtualized/dist/commonjs/List';
+import InfiniteLoader from 'react-virtualized/dist/commonjs/InfiniteLoader';
+
+const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
+
+class VirtualizedExample extends React.Component {
+  state = {
+    data: [],
+    loading: false,
+  }
+
+  loadedRowsMap = {}
+
+  componentDidMount() {
+    this.fetchData((res) => {
+      this.setState({
+        data: res.results,
+      });
+    });
+  }
+
+  fetchData = (callback) => {
+    reqwest({
+      url: fakeDataUrl,
+      type: 'json',
+      method: 'get',
+      contentType: 'application/json',
+      success: (res) => {
+        callback(res);
+      },
+    });
+  }
+
+  handleInfiniteOnLoad = ({ startIndex, stopIndex }) => {
+    let data = this.state.data;
+    this.setState({
+      loading: true,
+    });
+    for (let i = startIndex; i <= stopIndex; i++) {
+      // 1 means loading
+      this.loadedRowsMap[i] = 1;
+    }
+    if (data.length > 19) {
+      message.warning('Virtualized List loaded all');
+      this.setState({
+        loading: false,
+      });
+      return;
+    }
+    this.fetchData((res) => {
+      data = data.concat(res.results);
+      this.setState({
+        data,
+        loading: false,
+      });
+    });
+  }
+
+  isRowLoaded = ({ index }) => !!this.loadedRowsMap[index]
+
+  renderItem = ({ index, key, style }) => {
+    const { data } = this.state;
+    const item = data[index];
+    return (
+      <List.Item key={key} style={style}>
+        <List.Item.Meta
+          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+          title={<a href="https://ant.design">{item.name.last}</a>}
+          description={item.email}
+        />
+        <div>Content</div>
+      </List.Item>
+    );
+  }
+
+  render() {
+    const { data } = this.state;
+    const vlist = ({
+      height, isScrolling, onChildScroll, scrollTop, onRowsRendered, width,
+    }) => (
+      <VList
+        autoHeight
+        height={height}
+        isScrolling={isScrolling}
+        onScroll={onChildScroll}
+        overscanRowCount={2}
+        rowCount={data.length}
+        rowHeight={73}
+        rowRenderer={this.renderItem}
+        onRowsRendered={onRowsRendered}
+        scrollTop={scrollTop}
+        width={width}
+      />
+    );
+    const autoSize = ({
+      height, isScrolling, onChildScroll, scrollTop, onRowsRendered,
+    }) => (
+      <AutoSizer disableHeight>
+        {({ width }) => vlist({
+          height, isScrolling, onChildScroll, scrollTop, onRowsRendered, width,
+        })}
+      </AutoSizer>
+    );
+    const infiniteLoader = ({
+      height, isScrolling, onChildScroll, scrollTop,
+    }) => (
+      <InfiniteLoader
+        isRowLoaded={this.isRowLoaded}
+        loadMoreRows={this.handleInfiniteOnLoad}
+        rowCount={data.length}
+      >
+        {({ onRowsRendered }) => autoSize({
+          height, isScrolling, onChildScroll, scrollTop, onRowsRendered,
+        })}
+      </InfiniteLoader>
+    );
+    return (
+      <List style={{margin: '0 100px'}}>
+        {
+          data.length > 0 && (
+            <WindowScroller>
+              {infiniteLoader}
+            </WindowScroller>
+          )
         }
-        return <Tag color={color} key={tag}>{tag.toUpperCase()}</Tag>;
-      })}
-    </span>
-  ),
-}, {
-  title: 'Action',
-  key: 'action',
-  render: (text, record) => (
-    <span>
-      <a href="javascript:;">Invite {record.name}</a>
-      <Divider type="vertical" />
-      <a href="javascript:;">Delete</a>
-    </span>
-  ),
-}];
+        {this.state.loading && <Spin className="demo-loading" />}
+      </List>
+    );
+  }
+}
 
-const data = [{
-  key: '1',
-  name: 'John Brown',
-  age: 32,
-  address: 'New York No. 1 Lake Park',
-  tags: ['nice', 'developer'],
-}, {
-  key: '2',
-  name: 'Jim Green',
-  age: 42,
-  address: 'London No. 1 Lake Park',
-  tags: ['loser'],
-}, {
-  key: '3',
-  name: 'Joe Black',
-  age: 32,
-  address: 'Sidney No. 1 Lake Park',
-  tags: ['cool', 'teacher'],
-}];
-
+/*** 
+ * .demo-loading {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+}
+ * */
 
 export default class News extends PureComponent {
     render() {
         return (
-            <Table columns={columns} dataSource={data} />
+          <VirtualizedExample />
         );
     }
 }
