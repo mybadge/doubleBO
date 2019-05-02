@@ -23,11 +23,6 @@ export const HomeLeft = styled.div`
 		color: green;
 		font-size: 35px;
 	}
-	p {
-		color: #ccc;
-		padding-top: 10px;
-		font-size: 15px;
-	}
 	.img_left {
 		width: 50%;
 		height: 250px;
@@ -35,35 +30,12 @@ export const HomeLeft = styled.div`
 `;
 
 export const HomeProductRight = styled.div`
+	background: #313F4B;
+	color: white;
 	width: 50%;
 	height: 250px;
 	display: block;
 	float: right;
-	background: #313F4B;
-	color: white;
-
-	h3 {
-		font-size: 30px;
-		margin: 30px 20px 30px 20px;
-	}
-	h5 {
-		font-size: 14px;
-		margin: 20px 20px 20px 20px;
-	}
-`;
-
-export const Button = styled.a`
-	display: block;
-	margin-left: 20px;
-	padding-top: 6px;
-	width: 120px;
-	height: 20px;
-	font-size: 14px;
-	text-align: center;
-	color: white;
-	border: 1px solid white;
-	cursor: pointer;
-	text-decoration: none;
 `;
 
 export const TopicWrapper = styled.div`
@@ -141,7 +113,6 @@ export const ProductCenter = styled.div`
 `;
 
 export const TechnologyWrapper = styled.div`
-	margin-top: -150px;
 	width: 960px;
 	height: 650px;
 	background-image: url(${technologyBg});
@@ -152,6 +123,7 @@ export const TechonlogyCenter = styled.div`
 	h2 {
 		display: block;
 		color: red;
+		padding-top:90px;
 		padding-bottom: 10px;
 		p {
 			color: #ccc;
@@ -166,12 +138,12 @@ export const TechonlogyCenter = styled.div`
 		font-size: 12px;
 		margin: 10px 0px 10px 0px;
 	}
-	padding: 110px;
-    margin: 90px auto;
+
+    margin: 0px auto;
 	width: 600px;
 	height: 600px;
 	.content {
-		margin-top: -10px;
+		margin-top: 40px;
 		width: 100%;
 		height: 300px;
 		display: flex;
@@ -204,10 +176,21 @@ export const TechonlogyCenter = styled.div`
 	}
 `
 
-export const NewsList = styled.div`
+export const NewsListWrapper = styled.div`
+	h2 {
+		display: block;
+		color: red;
+		padding-bottom: 10px;
+		p {
+			color: #ccc;
+			font-size: 10px;
+		}
+	}
+	width: 600px;
+	height: auto;
+	margin: -100px auto 0px auto;
 
 `
-
 
 export const ListItem = styled.div`
 	overflow: hidden;

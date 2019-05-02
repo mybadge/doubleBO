@@ -1,9 +1,6 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Topic from './components/Topic';
-import List from './components/List';
-// import Recommend from './components/Recommend';
-// import Writer from './components/Writer';
 import { actionCreators } from './store';
 
 import top_img from '../../statics/top_img.jpg'
@@ -15,19 +12,36 @@ import product_04 from '../../statics/product_04.jpg'
 import product_05 from '../../statics/product_05.jpg'
 import product_06 from '../../statics/product_06.jpg'
 import product_07 from '../../statics/product_07.jpg'
-
+import { 
+	List,
+	Button,
+	Carousel,
+	Typography 
+} from 'antd';
 
 import {
 	BackTop, 
 	HomeWrapper,
 	HomeLeft,
 	HomeProductRight,
-	Button,
 	ProductCenter,
 	TechnologyWrapper,
 	TechonlogyCenter,
-	NewsList
+	NewsListWrapper
 } from './style';
+
+const data = [
+	'Racing car sprays burning fuel into crowd.',
+	'Japanese princess to wed commoner.',
+	'Australian walks 100km after outback crash.',
+	'Man charged over missing wedding girl.',
+	'Los Angeles battles huge wildfires.',
+	'Racing car sprays burning fuel into crowd.',
+	'Japanese princess to wed commoner.',
+	'Australian walks 100km after outback crash.',
+	'Man charged over missing wedding girl.'
+  ];
+const { Title, Paragraph, Text } = Typography;
 
 class Home extends PureComponent {
 
@@ -39,21 +53,25 @@ class Home extends PureComponent {
 		return (
 			<HomeWrapper>
 				<HomeLeft>
-					<img className='banner-img' alt='' src={ top_img } />
+					<Carousel autoplay>
+						<div><img className='banner-img' alt='' src={ top_img } /></div>
+						<div><img className='banner-img' alt='' src={ top_img } /></div>
+						<div><img className='banner-img' alt='' src={ top_img } /></div>
+						<div><img className='banner-img' alt='' src={ top_img } /></div>
+					</Carousel>
+					
 					<div className='center'>绿色生态农业  携手健康生活
-						<br />
-						<p>Green ecological planting and healthy living</p>
+						<Paragraph style={{'color': '#ccc','font-size': 15 }}>Green ecological planting and healthy living</Paragraph>
 					</div>
 					<Topic />
 					<div>
 						<img className='img_left' alt='' src={ img_left } />
 						<HomeProductRight>
-							<h3>产品中心</h3>
-							<h5>Tianjin Baodi agricultural development<br/>Limited conpany</h5>
-
-							<h5>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</h5>
-
-							<Button href='http://www.baidu.com' target='_blank' >了解更多>></Button>
+							<div style={{'padding-top': '10px','margin': '0px 10px 10px 10px'}}>
+								<Title level={2} style={{'color': 'white'}}>产品中心</Title>
+								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</Paragraph>
+								<Button href='http://www.baidu.com' target='_blank' >了解更多>></Button>
+							</div>
 						</HomeProductRight>
 					</div>
 					<ProductCenter>
@@ -75,20 +93,23 @@ class Home extends PureComponent {
 								<dt>
 									<img className='imgLeft' alt='' src={product_06}/>
 									<div className='divRight'>
-										<h3>天麻栽培技术</h3>
-										<h5>Tianjin Baodi agricultural development<br/>Limited conpany</h5>
-
-										<h5>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</h5>
+										<Title level={4}>天麻栽培技术</Title>
+											<Paragraph>
+												Tianjin Baodi agricultural development
+												<br/>Limited conpany
+												<br/>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司
+											</Paragraph>
 
 										<Button style={{'margin-left':'0px'}} href='http://www.baidu.com' target='_blank' >了解详情>></Button>
 									</div>
 								</dt>
 								<dt>
 									<div className='divLeft'>
-										<h3>苹果栽培技术</h3>
-										<h5>Tianjin Baodi agricultural development</h5>
-
-										<h5>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</h5>
+										<Title level={4}>苹果栽培技术</Title>
+										<Paragraph>
+												Tianjin Baodi agricultural development
+												<br/>Limited conpany
+										</Paragraph>
 										<Button style={{'margin-left':'0px'}}  href='http://www.baidu.com' target='_blank' >了解详情>></Button>
 									</div>
 									<img className='imgRight' alt='' src={product_07}/>
@@ -97,11 +118,17 @@ class Home extends PureComponent {
 						</TechonlogyCenter>
 					</TechnologyWrapper>
 					
-					<NewsList>
+					<NewsListWrapper>
 						<h2>最新动态/<p>Least news</p></h2>
-					</NewsList>
+						<List
+							bordered
+							dataSource={data}
+							renderItem={item => (<List.Item><Typography.Text mark>[2019-05-02]</Typography.Text> {item}</List.Item>)}
+							/>
+						
+					</NewsListWrapper>
 
-					<List />
+					{/* <List /> */}
 				</HomeLeft>
 				
 				{ this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>顶部</BackTop> : null}

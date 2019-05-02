@@ -18,6 +18,7 @@ import {
 	SearchInfoItem,
 	Addition
 } from './style';
+import { Menu, Breadcrumb } from 'antd';
 
 class MyHeader extends Component {
 
@@ -62,7 +63,8 @@ class MyHeader extends Component {
 	render() {
 		const { focused, handleInputFocus, handleInputBlur, list, login, logout } = this.props;
 		return (
-			<HeaderWrapper>
+			<div>
+				<HeaderWrapper>
 				<Link to='/'>
 					<Logo/>
 				</Link>
@@ -109,6 +111,14 @@ class MyHeader extends Component {
 					<Button className='reg'>注册</Button> */}
 				</Addition>
 			</HeaderWrapper>
+				
+				{/* <Breadcrumb>
+					<Breadcrumb.Item>Home</Breadcrumb.Item>
+					<Breadcrumb.Item><a href="">Application Center</a></Breadcrumb.Item>
+					<Breadcrumb.Item><a href="">Application List</a></Breadcrumb.Item>
+					<Breadcrumb.Item>An Application</Breadcrumb.Item>
+				</Breadcrumb> */}
+			</div>
 		);
 	}
 }

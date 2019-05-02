@@ -11,27 +11,43 @@ module.exports = {
         filename: "[name].js",
         path: __dirname + '/build'
     },
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: "babel-loader",
-                exclude: /(node_modules|bower_components)/,
-                query: {
-                    presets: ['react','es2015'],
-                    "plugins":[
-                        ["import",{"libraryName":"antd","style":true}]
-                    ]
-                }
+    module:{
+        rules:[
+            {//ES6、JSX处理
+                test:/(\.jsx|\.js)$/,
+                exclude: /node_modules/,
+                loader:'babel-loader',
+                query:
+                    {
+                        presets:["env", "react"],
+                        plugins: [
+                            [
+                                "import",
+                                {libraryName: "antd", style: 'css'}
+                            ] //antd按需加载
+                        ]
+                    },
             },
-            { 
-                test: /\.css$/, 
-                loader: 'style-loader!css-loader' 
+
+            {//CSS处理
+                test: /\.css$/,
+                loader: "style-loader!css-loader?modules",
+                exclude: /node_modules/,
             },
-            { 
-                test: /\.less$/, 
-                use: extractLESS.extract([ 'css-loader', 'less-loader' ])
-            }
+
+            {//antd样式处理
+              test:/\.css$/,
+              exclude:/src/,
+              use:[
+                  { loader: "style-loader",},
+                  {
+                      loader: "css-loader",
+                      options:{
+                          importLoaders:1
+                      }
+                  }
+              ]
+            },
         ]
     },
     plugins: [

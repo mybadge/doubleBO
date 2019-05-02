@@ -10,15 +10,12 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const Logo = styled.div`
-	position: absolute;
-	top: 0;
-	left: 100px;
-	display: block;
+ 	margin: 0px 24px 0px 0;
+ 	float: left;
 	width: 150px;
 	height: 56px;
 	background: url(${shuangbo});
 	background-size: contain;
-	
 `;
 
 export const Nav = styled.div`
