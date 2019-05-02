@@ -13,7 +13,6 @@ import Write from './pages/write';
 
 import store from './store';
 import { Layout } from 'antd';
-import { FooterWrapper } from './common/header/style'
 import 'antd/dist/antd.css';
 
 const { Header, Footer, Content } = Layout;

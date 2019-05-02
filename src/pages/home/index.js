@@ -41,7 +41,7 @@ const data = [
 	'Australian walks 100km after outback crash.',
 	'Man charged over missing wedding girl.'
   ];
-const { Title, Paragraph, Text } = Typography;
+const { Title, Paragraph } = Typography;
 
 class Home extends PureComponent {
 
