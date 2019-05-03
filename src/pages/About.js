@@ -9,7 +9,7 @@ export default class About extends PureComponent {
         return (
           <div style={{margin:'20px 100px'}}>
            <Typography>
-              <Title level={2}>第一部分 公司概况</Title>
+              <Title level={2}>一、公司概况</Title>
               <Paragraph>天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号：91120224328588995X；</Paragraph>
               <Paragraph>主营业务：农业技术研发、技术推广、技术咨询、水溶肥料、微生物肥料及其他有机肥生产、销售；农作物种植、销售；沼气发电。</Paragraph>
               <Paragraph>企业已通过GB/T19001-2016/ISO 9001：2015质量管理体系认证，证书号：17918Q10446ROM。</Paragraph>
@@ -22,7 +22,7 @@ export default class About extends PureComponent {
               类、园林绿化类、花卉类、中草药类等领域。</Paragraph>
               <Paragraph>公司目前在研制生态沼液肥、沼渣肥、改良土壤等领域，
               已获取20项国家专利。</Paragraph>
-              <Title level={2}>第二部分 “沃•双博”生态沼液肥</Title>
+              <Title level={2}>二、“沃•双博”生态沼液肥</Title>
               <Paragraph>
                   “沃•双博”生态沼液肥系列产品以中粮肉食（天津）有限
                   公司养殖一场产出的经过中温厌氧发酵后的沼液为介质，利
@@ -67,7 +67,7 @@ export default class About extends PureComponent {
                       <li>微生物菌解磷、解钾、固氮；生态沼液肥中的生物蛋白酶，加快各种营养元素的转化。</li>
                   </ul>
                 </Paragraph>
-              <Title level={2}>第三部分 生态沼液肥与其他肥料的区别</Title>
+              <Title level={2}>三、生态沼液肥与其他肥料的区别</Title>
               <Title level={4}>1、“沃•双博”生态沼液肥与农家肥的区别</Title>
               <Paragraph>
                 <ul>

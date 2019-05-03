@@ -69,8 +69,8 @@ class Home extends PureComponent {
 						<HomeProductRight>
 							<div style={{'padding-top': '10px','margin': '0px 10px 10px 10px'}}>
 								<Title level={2} style={{'color': 'white'}}>产品中心</Title>
-								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍公司介绍</Paragraph>
-								<Button href='http://www.baidu.com' target='_blank' >了解更多>></Button>
+								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号：91120224328588995X</Paragraph>
+								<Button href='/product' target='_blank' >了解更多>></Button>
 							</div>
 						</HomeProductRight>
 					</div>
@@ -100,7 +100,7 @@ class Home extends PureComponent {
 												<br/>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司
 											</Paragraph>
 
-										<Button style={{'margin-left':'0px'}} href='http://www.baidu.com' target='_blank' >了解详情>></Button>
+										<Button style={{'margin-left':'0px'}} href='/product' target='_blank' >了解详情>></Button>
 									</div>
 								</dt>
 								<dt>
