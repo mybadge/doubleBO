@@ -125,7 +125,7 @@ class VirtualizedExample extends React.Component {
       </InfiniteLoader>
     );
     return (
-      <List style={{margin: '0 100px'}}>
+      <List style={{margin: '0px 0px'}}>
         {
           data.length > 0 && (
             <WindowScroller>

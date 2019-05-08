@@ -1,14 +1,14 @@
 import React, { PureComponent } from 'react';
 
 import { Card } from 'antd';
-
+// import pro08 from '../statics/pro08.jpg'
 const { Meta } = Card;
 
 export default class Product extends PureComponent {
     
     render() {
         return (
-              <div style={{display:'flex', flexWrap: 'wrap', margin: '20px 100px'}}>
+              <div style={{display:'flex', flexWrap: 'wrap', margin: '20px 0px 20px 0px'}}>
                 {
                   this.gereryCard()
                 }
@@ -19,16 +19,23 @@ export default class Product extends PureComponent {
     gereryCard() {
       const listData = [];
       for (let i = 0; i < 23; i++) {
-        listData.push( <Card
-          hoverable
-          style={{ width: 240, marginLeft: 10, marginTop: 10 }}
-          cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-        >
-          <Meta
-            title="Europe Street beat"
-            description="香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量"
-          />
-        </Card>
+        listData.push( 
+            <Card
+              key={i}
+              hoverable
+              
+              style={{ width: 240, marginLeft: 10, marginTop: 10 }}
+              cover={
+                <img alt="example" 
+                   src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" 
+                  //  scr={pro08}
+                />}
+            >
+              <Meta
+                title="Europe Street beat"
+                description="香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量"
+              />
+            </Card>
           )
       }
       return listData;

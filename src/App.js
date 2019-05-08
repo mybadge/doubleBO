@@ -3,13 +3,13 @@ import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import BOHeader from './common/myheader';
 import Home from './pages/home';
-import Product from './pages/Product'
-import News from './pages/News'
-import Hr from './pages/Hr'
-import About from './pages/About'
-import Detail from './pages/detail/loadable.js';
-import Login from './pages/login';
-import Write from './pages/write';
+import Product from './pages/ProductAble'
+import News from './pages/NewsAble'
+import Hr from './pages/HrAble'
+import About from './pages/AboutAble'
+// import Detail from './pages/detail/loadable.js';
+// import Login from './pages/login';
+// import Write from './pages/write';
 
 import store from './store';
 import { Layout } from 'antd';
@@ -28,11 +28,11 @@ class App extends Component {
             <Header style={ {height: 56, background: 'white'} }>
               <BOHeader />
             </Header>
-            <Content style={{background: 'white', minHeight: 500}}>
+            <Content style={{background: 'white', minHeight: 500, paddingLeft: 100, paddingRight: 100}}>
               <Route path='/' exact component={Home}></Route>
-              <Route path='/login' exact component={Login}></Route>
-              <Route path='/write' exact component={Write}></Route>
-              <Route path='/detail/:id' exact component={Detail}></Route>
+              {/* <Route path='/login' exact component={Login}></Route> */}
+              {/* <Route path='/write' exact component={Write}></Route> */}
+              {/* <Route path='/detail/:id' exact component={Detail}></Route> */}
               <Route path='/home' exact component={Home}></Route>
               <Route path='/product' exact component={Product}></Route>
               <Route path='/news' exact component={News}></Route>
