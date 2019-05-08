@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import {
-  List, message, Avatar, Spin,
+  List, Avatar, Spin,
 } from 'antd';
 
 import reqwest from 'reqwest';
@@ -51,7 +51,7 @@ class VirtualizedExample extends React.Component {
       this.loadedRowsMap[i] = 1;
     }
     if (data.length > 19) {
-      message.warning('Virtualized List loaded all');
+      //message.warning('Virtualized List loaded all');
       this.setState({
         loading: false,
       });

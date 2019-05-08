@@ -32,7 +32,7 @@ export default class Product extends PureComponent {
                 />}
             >
               <Meta
-                title="Europe Street beat"
+                title="香河苦瓜实验"
                 description="香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量"
               />
             </Card>

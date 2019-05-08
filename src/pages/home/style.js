@@ -187,7 +187,7 @@ export const NewsListWrapper = styled.div`
 	}
 	width: 600px;
 	height: auto;
-	margin: -100px auto 0px auto;
+	margin: -100px auto 20px auto;
 
 `
 
