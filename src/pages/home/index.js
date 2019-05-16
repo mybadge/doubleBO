@@ -54,10 +54,10 @@ class Home extends PureComponent {
 			<HomeWrapper>
 				<HomeLeft>
 					<Carousel autoplay>
-						<div><img className='banner-img' alt='' src={ top_img } /></div>
-						<div><img className='banner-img' alt='' src={ top_img } /></div>
-						<div><img className='banner-img' alt='' src={ top_img } /></div>
-						<div><img className='banner-img' alt='' src={ top_img } /></div>
+						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
+						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
+						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
+						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
 					</Carousel>
 					
 					<div className='center'>绿色生态农业  携手健康生活
