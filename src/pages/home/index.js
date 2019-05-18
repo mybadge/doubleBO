@@ -2,8 +2,8 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Topic from './components/Topic';
 import { actionCreators } from './store';
+import { Link } from 'react-router-dom';
 
-import top_img from '../../statics/top_img.jpg'
 import img_left from '../../statics/img_left.png'
 import product_01 from '../../statics/product_01.jpg'
 import product_02 from '../../statics/product_02.jpg'
@@ -30,17 +30,6 @@ import {
 	NewsListWrapper
 } from './style';
 
-const data = [
-	'Racing car sprays burning fuel into crowd.',
-	'Japanese princess to wed commoner.',
-	'Australian walks 100km after outback crash.',
-	'Man charged over missing wedding girl.',
-	'Los Angeles battles huge wildfires.',
-	'Racing car sprays burning fuel into crowd.',
-	'Japanese princess to wed commoner.',
-	'Australian walks 100km after outback crash.',
-	'Man charged over missing wedding girl.'
-  ];
 const { Title, Paragraph } = Typography;
 
 class Home extends PureComponent {
@@ -50,24 +39,30 @@ class Home extends PureComponent {
 	}
 
 	render() {
+		const {cycleList, newsList} = this.props;
 		return (
 			<HomeWrapper>
 				<HomeLeft>
 					<Carousel autoplay>
-						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
-						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
-						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
-						<div><img className='banner-img' alt='alt' src={ top_img } /></div>
+						{
+							cycleList.map((item, index) => {
+								return (
+									<Link key={index} to={'/detail/' + item.get('id')}>
+										<div><img className='banner-img' alt='alt' src={ item.get('imgUrl') } /></div>
+									</Link>
+								);
+							})
+						}
 					</Carousel>
 					
 					<div className='center'>绿色生态农业  携手健康生活
-						<Paragraph style={{'color': '#ccc','font-size': 15 }}>Green ecological planting and healthy living</Paragraph>
+						<Paragraph style={{'color': '#ccc','fontSize': 15 }}>Green ecological planting and healthy living</Paragraph>
 					</div>
 					<Topic />
 					<div>
 						<img className='img_left' alt='' src={ img_left } />
 						<HomeProductRight>
-							<div style={{'padding-top': '10px','margin': '0px 10px 10px 10px'}}>
+							<div style={{'paddingTop': '10px','margin': '0px 10px 10px 10px'}}>
 								<Title level={2} style={{'color': 'white'}}>产品中心</Title>
 								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号：91120224328588995X</Paragraph>
 								<Button href='/product' target='_blank' >了解更多>></Button>
@@ -100,7 +95,7 @@ class Home extends PureComponent {
 												<br/>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司
 											</Paragraph>
 
-										<Button style={{'margin-left':'0px'}} href='/product' target='_blank' >了解详情>></Button>
+										<Button style={{'marginLeft':'0px'}} href='/product' target='_blank' >了解详情>></Button>
 									</div>
 								</dt>
 								<dt>
@@ -110,7 +105,7 @@ class Home extends PureComponent {
 												Tianjin Baodi agricultural development
 												<br/>Limited conpany
 										</Paragraph>
-										<Button style={{'margin-left':'0px'}}  href='http://www.baidu.com' target='_blank' >了解详情>></Button>
+										<Button style={{'marginLeft':'0px'}}  href='http://www.baidu.com' target='_blank' >了解详情>></Button>
 									</div>
 									<img className='imgRight' alt='' src={product_07}/>
 								</dt>
@@ -122,8 +117,8 @@ class Home extends PureComponent {
 						<h2>最新动态/<p>Least news</p></h2>
 						<List
 							bordered
-							dataSource={data}
-							renderItem={item => (<List.Item><Typography.Text mark>[2019-05-02]</Typography.Text> {item}</List.Item>)}
+							dataSource={newsList}
+							renderItem={item => (<List.Item><Typography.Text>[{item.get('time')}]</Typography.Text> {item.get('title')}</List.Item>)}
 							/>
 						
 					</NewsListWrapper>
@@ -152,7 +147,10 @@ class Home extends PureComponent {
 }
 
 const mapState = (state) => ({
-	showScroll: state.getIn(['home', 'showScroll'])
+	showScroll: state.getIn(['home', 'showScroll']),
+	cycleList: state.getIn(['home', 'cycleList']),
+	newsList: state.getIn(['home', 'newsList']),
+	topicList: state.getIn(['home', 'topicList']),
 })
 
 const mapDispatch = (dispatch) => ({

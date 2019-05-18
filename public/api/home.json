@@ -1,7 +1,8 @@
 {
 	"success": true,
 	"data": {
-		"cycleList": [{
+		"cycleList": [
+			{
 			"id": 1,
 			"title": "产品介绍1",
 			"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
@@ -21,19 +22,23 @@
 			"title": "产品介绍4",
 			"linkUrl": "http://www.baidu.com",
 			"imgUrl": "/images/top_img.jpg"
-		}],
+		}
+	],
 		"topicList": [{
 			"id": 1,
 			"title": "公司新闻",
-			"imgUrl": "/images/news_01.jpg"
+			"imgUrl": "/images/news_01.jpg",
+			"linkUrl": "/news"
 		}, {
 			"id": 2,
 			"title": "行业新闻",
-			"imgUrl": "/images/news_02.jpg"
+			"imgUrl": "/images/news_02.jpg",
+			"linkUrl": "/news"
 		}, {
 			"id": 3,
-			"title": "公司公告",
-			"imgUrl": "/images/news_02.jpg"
+			"title": "公司简介",
+			"imgUrl": "/images/news_03.jpg",
+			"linkUrl": "/about"
 		}],
 		"newsList": [{
 			"id": 1,
@@ -60,13 +65,6 @@
 			"title": "我司与中粮集团签署了xxx合作",
 			"time": "2019-05-15",
 			"linlUrl": "http://www.baidu.com"
-		}],
-		"recommendList": [{
-			"id": 1,
-			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-3-7123fd94750759acf7eca05b871e9d17.png"
-		}, {
-			"id": 2,
-			"imgUrl": "http://cdn2.jianshu.io/assets/web/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png"
 		}]
 	}
 }

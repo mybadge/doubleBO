@@ -5,6 +5,7 @@ import technologyBg from '../../statics/technology_bg.jpg'
 export const HomeWrapper = styled.div`
 	overflow: hidden;
 	width: 960px;
+	margin: 0px auto;
 `;
 
 export const HomeLeft = styled.div`
