@@ -4,14 +4,6 @@ import { actionCreators } from './store';
 import { Link } from 'react-router-dom';
 import Topic from './components/Topic';
 
-import img_left from '../../statics/img_left.png'
-import product_01 from '../../statics/product_01.jpg'
-import product_02 from '../../statics/product_02.jpg'
-import product_03 from '../../statics/product_03.jpg'
-import product_04 from '../../statics/product_04.jpg'
-import product_05 from '../../statics/product_05.jpg'
-import product_06 from '../../statics/product_06.jpg'
-import product_07 from '../../statics/product_07.jpg'
 import { 
 	List,
 	Button,
@@ -60,7 +52,7 @@ class Home extends PureComponent {
 					</div>
 					<Topic />
 					<div>
-						<img className='img_left' alt='' src={ img_left } />
+						<img className='img_left' alt='' src='/assets/img_left.png' />
 						<HomeProductRight>
 							<div style={{'paddingTop': '10px','margin': '0px 10px 10px 10px'}}>
 								<Title level={2} style={{'color': 'white'}}>产品中心</Title>
@@ -71,12 +63,12 @@ class Home extends PureComponent {
 					</div>
 					<ProductCenter>
 						<h2>产品中心/ <p>Product center</p></h2>
-						<img className='left' alt='' src={product_01} />
+						<img className='left' alt='' src='/assets/product_01.jpg' />
 						<div>
-							<img className='right1' alt='' src={product_02} />
-							<img className='right2' alt='' src={product_03} />
-							<img className='right3' alt='' src={product_04} />
-							<img className='right4' alt='' src={product_05} />
+							<img className='right1' alt='' src='/assets/product_02.jpg' />
+							<img className='right2' alt='' src='/assets/product_03.jpg' />
+							<img className='right3' alt='' src='/assets/product_04.jpg' />
+							<img className='right4' alt='' src='/assets/product_05.jpg' />
 						</div>
 						
 					</ProductCenter>
@@ -86,7 +78,7 @@ class Home extends PureComponent {
 							<h2>技术中心/<p>Technology center</p></h2>
 							<dl className='content'>
 								<dt>
-									<img className='imgLeft' alt='' src={product_06}/>
+									<img className='imgLeft' alt='' src='/assets/product_06.jpg'/>
 									<div className='divRight'>
 										<Title level={4}>天麻栽培技术</Title>
 											<Paragraph>
@@ -107,7 +99,7 @@ class Home extends PureComponent {
 										</Paragraph>
 										<Button style={{'marginLeft':'0px'}}  href='http://www.baidu.com' target='_blank' >了解详情>></Button>
 									</div>
-									<img className='imgRight' alt='' src={product_07}/>
+									<img className='imgRight' alt='' src='/assets/product_07.jpg'/>
 								</dt>
 							</dl>
 						</TechonlogyCenter>

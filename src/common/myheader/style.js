@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 // import logoPic from '../../statics/logo.png';
-import shuangbo from '../../statics/logo_db.jpg';
+//import shuangbo from '../../statics/logo_db.jpg';
 
 export const HeaderWrapper = styled.div`
 	z-index: 1;
@@ -14,7 +14,7 @@ export const Logo = styled.div`
  	float: left;
 	width: 150px;
 	height: 56px;
-	background: url(${shuangbo});
+	background: url('/assets/logo_db.jpg');
 	background-size: contain;
 `;
 

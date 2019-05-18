@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import technologyBg from '../../statics/technology_bg.jpg'
-
 export const HomeWrapper = styled.div`
 	overflow: hidden;
 	width: 960px;
@@ -115,7 +113,7 @@ export const ProductCenter = styled.div`
 export const TechnologyWrapper = styled.div`
 	width: 960px;
 	height: 650px;
-	background-image: url(${technologyBg});
+	background-image: url('/assets/technology_bg.jpg');
 	background-size: 1280px 580px;
 `
 

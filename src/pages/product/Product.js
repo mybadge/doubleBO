@@ -30,7 +30,7 @@ class Product extends PureComponent {
                     cover={
                       <img alt="example" 
                         // src="http://pic32.nipic.com/20130823/13339320_183302468194_2.jpg" 
-                        scr={'http://192.168.1.4:3000/'+item.get('imgUrl')}
+                        src={item.get('imgUrl')}
                         style={{width: 240, height: 300}}
                       />}
                   >
