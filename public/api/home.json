@@ -6,38 +6,38 @@
 			"id": 1,
 			"title": "产品介绍1",
 			"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
-			"imgUrl": "/images/top_img.jpg"
+			"imgUrl": "/assets/top_img.jpg"
 		}, {
 			"id": 2,
 			"title": "产品介绍2",
 			"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
-			"imgUrl": "/images/top_img.jpg"
+			"imgUrl": "/assets/top_img.jpg"
 		}, {
 			"id": 3,
 			"title": "产品介绍3",
 			"linkUrl": "https://www.baidu.com/s?wd=%E5%A4%A9%E6%B4%A5%E5%8F%8C%E5%8D%9A%E5%86%9C%E4%B8%9A%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&rsv_spt=1&rsv_iqid=0xb2e26f190003ce7c&issp=1&f=3&rsv_bp=1&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=38&rsv_sug1=40&rsv_sug7=101&rsv_sug2=0&prefixsug=%25E5%25A4%25A9%25E6%25B4%25A5%25E5%258F%258C%25E5%258D%259A%25E5%2586%259C%25E4%25B8%259A&rsp=0&inputT=11212&rsv_sug4=11212",
-			"imgUrl": "/images/top_img.jpg"
+			"imgUrl": "/assets/top_img.jpg"
 		}, {
 			"id": 4,
 			"title": "产品介绍4",
 			"linkUrl": "http://www.baidu.com",
-			"imgUrl": "/images/top_img.jpg"
+			"imgUrl": "/assets/top_img.jpg"
 		}
 	],
 		"topicList": [{
 			"id": 1,
 			"title": "公司新闻",
-			"imgUrl": "/images/news_01.jpg",
+			"imgUrl": "/assets/news_01.jpg",
 			"linkUrl": "/news"
 		}, {
 			"id": 2,
 			"title": "行业新闻",
-			"imgUrl": "/images/news_02.jpg",
+			"imgUrl": "/assets/news_02.jpg",
 			"linkUrl": "/news"
 		}, {
 			"id": 3,
 			"title": "公司简介",
-			"imgUrl": "/images/news_03.jpg",
+			"imgUrl": "/assets/news_03.jpg",
 			"linkUrl": "/about"
 		}],
 		"newsList": [{

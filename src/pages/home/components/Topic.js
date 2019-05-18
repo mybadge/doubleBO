@@ -11,7 +11,7 @@ class Topic extends PureComponent {
 				{
 					list.map((item, index)=>{
 						return (
-						<Link to={item.get('linkUrl')}>
+						<Link key={index} to={item.get('linkUrl')}>
 							<TopicItem>
 								<img alt='' className='topic-pic' src={item.get('imgUrl')} />
 								<dd>{item.get('title')}</dd>

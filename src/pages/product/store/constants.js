@@ -1,0 +1,1 @@
+export const GET_PRODUCT_DATA = 'product/GET_PRODUCT_DATA';

@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import Topic from './components/Topic';
 import { actionCreators } from './store';
 import { Link } from 'react-router-dom';
+import Topic from './components/Topic';
 
 import img_left from '../../statics/img_left.png'
 import product_01 from '../../statics/product_01.jpg'
