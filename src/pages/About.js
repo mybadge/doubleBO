@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 
 import { Timeline, Icon, Typography } from 'antd';
+//import { AboutBg } from './home/style';
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -9,7 +10,11 @@ export default class About extends PureComponent {
         return (
           <div style={{margin:'20px 0px'}}>
             <div style={{flex:1, textAlign:'center'}}>
+<<<<<<< HEAD
               <img alt='img' style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
+=======
+              <img style={{margin: '10px auto'}} alt='img' src='/assets/compony_logo.png' />
+>>>>>>> 添加 背景图片
             </div>
             <Typography style={{lineHeight: '1.5em'}}>
               <Title level={2}>一、公司概况</Title>

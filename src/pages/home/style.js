@@ -266,4 +266,10 @@ export const BackTop = styled.div`
 		width: 20;
 		height: 20;
 	}
-`
+`;
+
+export const AboutBg = styled.div`
+	margin: 20px 0px;
+	background-image: url('/assets/about_bg.jpg');
+	background-size: 1280px 680px;
+`;
