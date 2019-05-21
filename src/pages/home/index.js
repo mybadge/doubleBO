@@ -26,6 +26,10 @@ const { Title, Paragraph } = Typography;
 
 class Home extends PureComponent {
 
+	// constructor(props) {
+	// 	super(props);
+	// }
+
 	handleScrollTop() {
 		window.scrollTo(0, 0);
 	}
