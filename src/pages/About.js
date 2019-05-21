@@ -8,7 +8,10 @@ export default class About extends PureComponent {
     render() {
         return (
           <div style={{margin:'20px 0px'}}>
-           <Typography style={{lineHeight: '1.5em'}}>
+            <div style={{flex:1, textAlign:'center'}}>
+              <img style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
+            </div>
+            <Typography style={{lineHeight: '1.5em'}}>
               <Title level={2}>一、公司概况</Title>
               <Paragraph>天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号：91120224328588995X；</Paragraph>
               <Paragraph>主营业务：农业技术研发、技术推广、技术咨询、水溶肥料、微生物肥料及其他有机肥生产、销售；农作物种植、销售；沼气发电。</Paragraph>

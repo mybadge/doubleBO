@@ -9,7 +9,9 @@ class BOHeader extends Component {
     render() {
         return (
             <Header style={{background: 'white'}}>
-                <Logo />
+                <Link to='/home'>
+                    <Logo />
+                </Link>
                 <Menu
                     mode="horizontal"
                     defaultSelectedKeys={['/home']}
