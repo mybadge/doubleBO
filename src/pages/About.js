@@ -48,8 +48,8 @@ export default class About extends PureComponent {
               <Title level={4}>1、“沃•双博”生态沼液肥的特点</Title>
               <Paragraph>
                 <ul>
-                  <li>养分含量齐全，不但含有作物生长必须的<Text mark>氮、磷、钾</Text>
-                    大量元素，还含有<Text mark>锌、铁等多种微量元素</Text></li>
+                  <li>养分含量齐全，不但含有作物生长必须的<Text>氮、磷、钾</Text>
+                    大量元素，还含有<Text>锌、铁等多种微量元素</Text></li>
                   <li>长期的厌氧发酵环境使生态沼液肥能将土壤中大量的病菌、虫卵和杂草种子窒息而亡，比较安全。 </li>
                   <li>生态沼液肥的速效性很强，养分可利用率高，能迅速让作物吸收利用，同时由于有机质含量高、肥效稳定、后劲长、固速效与缓效兼备。</li>
                 </ul>
