@@ -5,26 +5,12 @@ import { Logo } from './style';
 
 const { Header } = Layout;
 
-
-/***
- * assssssss
- *  */
 class BOHeader extends Component {
-
-    // constructor(props) {
-    //     super(props);
-    // }
-
-    // componentDidMount() {
-    // }
-
     render() {
         return (
             <Header style={{background: 'white'}}>
                 <Logo />
-                
                 <Menu
-                    
                     mode="horizontal"
                     defaultSelectedKeys={['/home']}
                     selectedKeys={[this.props.history.location.pathname]}
@@ -38,12 +24,7 @@ class BOHeader extends Component {
                 </Menu>
             </Header>
         );
-        
     }
 }
 
 export default withRouter(BOHeader);
-
-// #components-layout-demo-top .logo {
-//  
-// }
