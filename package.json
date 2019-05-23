@@ -2,6 +2,7 @@
   "name": "shuangbo",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "ajv": "^6.10.0",
     "antd": "^3.16.1",
