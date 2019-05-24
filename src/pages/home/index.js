@@ -122,7 +122,7 @@ class Home extends PureComponent {
 					{/* <List /> */}
 				</HomeLeft>
 				
-				{ this.props.showScroll ? <BackTop onClick={this.handleScrollTop}>顶部</BackTop> : null}
+				{ this.props.showScroll ? <BackTop onClick={this.handleScrollTop}><img src='/assets/home_top.png' alt='img' /></BackTop> : null}
 			</HomeWrapper>
 		)
 	}

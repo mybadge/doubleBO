@@ -9,7 +9,7 @@ export default class About extends PureComponent {
         return (
           <div style={{margin:'20px 0px'}}>
             <div style={{flex:1, textAlign:'center'}}>
-              <img style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
+              <img alt='img' style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
             </div>
             <Typography style={{lineHeight: '1.5em'}}>
               <Title level={2}>一、公司概况</Title>

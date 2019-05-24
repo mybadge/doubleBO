@@ -254,12 +254,16 @@ export const LoadMore = styled.div`
 
 export const BackTop = styled.div`
 	position: fixed;
-	right: 100px;
-	bottom: 100px;
-	width: 60px;
-	height: 60px;
-	line-height: 60px;
+	right: 80px;
+	bottom: 80px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
 	text-align: center;
 	border: 1px solid #ccc;
 	font-size: 14px;
+	img {
+		width: 20;
+		height: 20;
+	}
 `

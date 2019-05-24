@@ -17,6 +17,11 @@ const addHomeList = (list, nextPage) => ({
 	nextPage
 })
 
+const getHrListData = (list) => ({
+	type: constants.GET_HR_LIST,
+	hrList: fromJS(list),
+})
+
 export const getHomeInfo = () => {
 	return (dispatch) => {
 		axios.get('/api/home.json').then((res) => {
@@ -39,3 +44,12 @@ export const toggleTopShow = (show) => ({
 	type: constants.TOGGLE_SCROLL_TOP,
 	show
 })
+
+export const getHrList = () => {
+	return (dispatch) => {
+		axios.get('/api/hr.json').then((res) => {
+			const result = res.data.data;
+			dispatch(getHrListData(result));
+		})
+	}
+}

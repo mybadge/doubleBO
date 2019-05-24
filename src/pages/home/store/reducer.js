@@ -8,7 +8,8 @@ const defaultState = fromJS({
 	showScroll: false,
 	cycleList: [],
 	topicList:[],
-	newsList:[]
+	newsList:[],
+	hrList: []
 });
 
 const changeHomeData = (state, action) => {
@@ -17,7 +18,7 @@ const changeHomeData = (state, action) => {
 		articleList: fromJS(action.articleList),
 		recommendList: fromJS(action.recommendList),
 		cycleList: fromJS(action.cycleList),
-		newsList: fromJS(action.newsList)
+		newsList: fromJS(action.newsList),
 	});
 };
 
@@ -36,6 +37,8 @@ export default (state = defaultState, action) => {
 			return addArticleList(state, action);
 		case constants.TOGGLE_SCROLL_TOP:
 			return state.set('showScroll', action.show);
+		case constants.GET_HR_LIST:
+			return state.set('hrList', action.hrList);
 		default:
 			return state;
 	}
