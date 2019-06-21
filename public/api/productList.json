@@ -3,13 +3,13 @@
 	"data": {
 		"list": [{
             "productId": 1,
-            "title": "香河苦瓜实验",
-            "desc": "香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量",
+            "title": "花卉营养液",
+            "desc": "沃•双博生态沼液花卉营养液产品包装",
             "imgUrl": "/assets/pro01.png"
         },{
             "productId": 2,
-            "title": "香河苦瓜实验",
-            "desc": "香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量",
+            "title": "产品包装",
+            "desc": "沃•双博生态沼液肥产品包装",
             "imgUrl": "/assets/pro02.png"
         },{
             "productId": 4,

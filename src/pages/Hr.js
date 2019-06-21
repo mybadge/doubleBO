@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { actionCreators } from './home/store';
 import { Link } from 'react-router-dom';
 
-import { List, Typography, Button, Divider } from 'antd';
+import { List, Typography, Button } from 'antd';
 
 const { Title, Text } = Typography;
 

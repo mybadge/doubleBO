@@ -165,6 +165,7 @@ export const TechonlogyCenter = styled.div`
 		padding-top: 10px;
 		padding-left: 10px;
 		color: white;
+		margin-left: 10px;
 	}
 	
 	.imgRight {

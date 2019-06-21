@@ -9,7 +9,8 @@ const defaultState = fromJS({
 	cycleList: [],
 	topicList:[],
 	newsList:[],
-	hrList: []
+	hrList: [],
+	patentList: [],
 });
 
 const changeHomeData = (state, action) => {
@@ -19,15 +20,23 @@ const changeHomeData = (state, action) => {
 		recommendList: fromJS(action.recommendList),
 		cycleList: fromJS(action.cycleList),
 		newsList: fromJS(action.newsList),
+		patentList: fromJS(action.patentList)
 	});
 };
 
 const addArticleList = (state, action) => {
-return state.merge({
+	return state.merge({
 		'articleList': state.get('articleList').concat(action.list),
 		'articlePage': action.nextPage
 	});
 };
+
+const changeNewsData = (state, action) => {
+	return state.merge({
+		newsList: fromJS(action.newsList),
+		patentList: fromJS(action.patentList)
+	})
+}
 
 export default (state = defaultState, action) => {
 	switch(action.type) {
@@ -39,6 +48,8 @@ export default (state = defaultState, action) => {
 			return state.set('showScroll', action.show);
 		case constants.GET_HR_LIST:
 			return state.set('hrList', action.hrList);
+		case constants.GET_NEWS_PATENT_LIST:
+			return changeNewsData(state, action)
 		default:
 			return state;
 	}

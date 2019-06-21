@@ -60,8 +60,8 @@ class Home extends PureComponent {
 						<HomeProductRight>
 							<div style={{'paddingTop': '10px','margin': '0px 10px 10px 10px'}}>
 								<Title level={2} style={{'color': 'white'}}>产品中心</Title>
-								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号：91120224328588995X</Paragraph>
-								<Button href='/product' target='_blank' >了解更多>></Button>
+								<Paragraph style={{'margin': '0px 10px 10px 0px', 'color': 'white'}}>Tianjin Baodi agricultural development<br/>Limited conpany<br /><br />“沃•双博”生态沼液肥系列产品是由天津双博农业科技有限公司与北京农林科学院共同研发、由中粮肉食（天津）有限公司和天津双博农业科技有限公司合作生产的新一代农业生产用肥</Paragraph>
+								<Link to='/product'><Button >了解更多>></Button></Link> 
 							</div>
 						</HomeProductRight>
 					</div>
@@ -84,24 +84,19 @@ class Home extends PureComponent {
 								<dt>
 									<img className='imgLeft' alt='' src='/assets/product_06.jpg'/>
 									<div className='divRight'>
-										<Title level={4}>天麻栽培技术</Title>
-											<Paragraph>
-												Tianjin Baodi agricultural development
-												<br/>Limited conpany
-												<br/>公司介绍公司介绍,公司介绍公司介绍公司介绍公司介绍公司
-											</Paragraph>
-
-										<Button style={{'marginLeft':'0px'}} href='/product' target='_blank' >了解详情>></Button>
+										<Title level={4}>生态沼液肥（瓜果蔬菜类专用）</Title>
+										<Paragraph>
+											我司以科技服务农业，以质量求生存，以信誉求发展的宗旨，为我国的农业可持续发展和绿色有机食品基地的建设做出应有的贡献
+										</Paragraph>
+										
 									</div>
 								</dt>
 								<dt>
 									<div className='divLeft'>
-										<Title level={4}>苹果栽培技术</Title>
-										<Paragraph>
-												Tianjin Baodi agricultural development
-												<br/>Limited conpany
-										</Paragraph>
-										<Button style={{'marginLeft':'0px'}}  href='http://www.baidu.com' target='_blank' >了解详情>></Button>
+										<Title level={4}>生态沼液肥（叶菜类专用）</Title>
+											<Paragraph>
+												我司与北京农林科学院、中国农业大学、天津市一轻局微生物研究所、三河市职教中心等科研所建立了密切的合作关系
+											</Paragraph>
 									</div>
 									<img className='imgRight' alt='' src='/assets/product_07.jpg'/>
 								</dt>

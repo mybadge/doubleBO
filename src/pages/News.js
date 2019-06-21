@@ -1,156 +1,64 @@
 import React, { PureComponent } from 'react';
 
-import {
-  List, Avatar, Spin,
-} from 'antd';
+import { List, Typography, Button } from 'antd';
 
-import reqwest from 'reqwest';
+import { connect } from 'react-redux';
+import { actionCreators } from './home/store';
 
-import WindowScroller from 'react-virtualized/dist/commonjs/WindowScroller';
-import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
-import VList from 'react-virtualized/dist/commonjs/List';
-import InfiniteLoader from 'react-virtualized/dist/commonjs/InfiniteLoader';
+const { Title, Text } = Typography;
 
-const fakeDataUrl = 'https://randomuser.me/api/?results=5&inc=name,gender,email,nat&noinfo';
 
-class VirtualizedExample extends React.Component {
-  state = {
-    data: [],
-    loading: false,
-  }
 
-  loadedRowsMap = {}
-
-  componentDidMount() {
-    this.fetchData((res) => {
-      this.setState({
-        data: res.results,
-      });
-    });
-  }
-
-  fetchData = (callback) => {
-    reqwest({
-      url: fakeDataUrl,
-      type: 'json',
-      method: 'get',
-      contentType: 'application/json',
-      success: (res) => {
-        callback(res);
-      },
-    });
-  }
-
-  handleInfiniteOnLoad = ({ startIndex, stopIndex }) => {
-    let data = this.state.data;
-    this.setState({
-      loading: true,
-    });
-    for (let i = startIndex; i <= stopIndex; i++) {
-      // 1 means loading
-      this.loadedRowsMap[i] = 1;
-    }
-    if (data.length > 19) {
-      //message.warning('Virtualized List loaded all');
-      this.setState({
-        loading: false,
-      });
-      return;
-    }
-    this.fetchData((res) => {
-      data = data.concat(res.results);
-      this.setState({
-        data,
-        loading: false,
-      });
-    });
-  }
-
-  isRowLoaded = ({ index }) => !!this.loadedRowsMap[index]
-
-  renderItem = ({ index, key, style }) => {
-    const { data } = this.state;
-    const item = data[index];
-    return (
-      <List.Item key={key} style={style}>
-        <List.Item.Meta
-          avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
-          title={<a href="https://ant.design">{item.name.last}</a>}
-          description={item.email}
-        />
-        <div>Content</div>
-      </List.Item>
-    );
-  }
-
+class News extends PureComponent {
+    
   render() {
-    const { data } = this.state;
-    const vlist = ({
-      height, isScrolling, onChildScroll, scrollTop, onRowsRendered, width,
-    }) => (
-      <VList
-        autoHeight
-        height={height}
-        isScrolling={isScrolling}
-        onScroll={onChildScroll}
-        overscanRowCount={2}
-        rowCount={data.length}
-        rowHeight={73}
-        rowRenderer={this.renderItem}
-        onRowsRendered={onRowsRendered}
-        scrollTop={scrollTop}
-        width={width}
+    return (
+      <List
+        itemLayout="vertical"
+        // split={false}
+        style={{margin: '10 10',}}
+        header={<Title level={3}>新闻中心</Title>}
+
+        dataSource={this.props.patentList}
+        renderItem={item => (
+          <List.Item
+            key={item.get('id')}
+            // style={{padding:'0 0'}}
+          >
+
+            <List.Item.Meta
+              title={
+                <div>
+                  <Text level={4}>【{item.get('time')}】 发布了新专利</Text>
+                  {/* <Text style={{float: 'right', color: '#ccc', fontSize:14}}>{'日期:'+}</Text> */}
+                  <Button href={item.get('linkUrl')} style={{backgroundColor:'#96C301', color:'white', height: 28, float:'right'}}>Link</Button>
+                </div>
+              }
+              description={item.get('title') + ', ' + item.get('type')}
+            >
+            </List.Item.Meta>
+          
+          </List.Item>
+        )}
       />
     );
-    const autoSize = ({
-      height, isScrolling, onChildScroll, scrollTop, onRowsRendered,
-    }) => (
-      <AutoSizer disableHeight>
-        {({ width }) => vlist({
-          height, isScrolling, onChildScroll, scrollTop, onRowsRendered, width,
-        })}
-      </AutoSizer>
-    );
-    const infiniteLoader = ({
-      height, isScrolling, onChildScroll, scrollTop,
-    }) => (
-      <InfiniteLoader
-        isRowLoaded={this.isRowLoaded}
-        loadMoreRows={this.handleInfiniteOnLoad}
-        rowCount={data.length}
-      >
-        {({ onRowsRendered }) => autoSize({
-          height, isScrolling, onChildScroll, scrollTop, onRowsRendered,
-        })}
-      </InfiniteLoader>
-    );
-    return (
-      <List style={{margin: '0px 0px'}}>
-        {
-          data.length > 0 && (
-            <WindowScroller>
-              {infiniteLoader}
-            </WindowScroller>
-          )
-        }
-        {this.state.loading && <Spin className="demo-loading" />}
-      </List>
-    );
+  }
+
+  componentDidMount() {
+    this.props.getNewsList();
   }
 }
 
-/*** 
- * .demo-loading {
-  position: absolute;
-  bottom: -40px;
-  left: 50%;
-}
- * */
 
-export default class News extends PureComponent {
-    render() {
-        return (
-          <VirtualizedExample />
-        );
-    }
-}
+const mapState = (state) => ({
+  newList: state.getIn(['home', 'newList']),
+  patentList: state.getIn(['home', 'patentList'])
+})
+
+const mapDispatch = (dispatch) => ({
+	getNewsList() {
+		dispatch(actionCreators.getNewsList());
+	}
+});
+
+export default connect(mapState, mapDispatch)(News);
