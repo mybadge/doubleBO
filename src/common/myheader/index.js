@@ -6,6 +6,17 @@ import { Logo } from './style';
 const { Header } = Layout;
 
 class BOHeader extends Component {
+
+
+    shouldComponentUpdate(nextProps, nextState) {
+        const arr = new Array("/home","/product","/news","/hr","/about");
+        const pathName = nextProps.history.location.pathname;
+        if (arr.indexOf(pathName)==-1) {
+            return false
+        } 
+        return true;
+    }
+
     render() {
         return (
             <Header style={{background: 'white'}}>

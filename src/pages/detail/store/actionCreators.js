@@ -10,7 +10,7 @@ const changeDetail = (title, content) => ({
 export const getDetail = (id) => {
 	return (dispatch) => {
 		axios.get('/api/detail.json?id=' + id).then((res) => {
-			const result = res.data.data;
+			const result = res.data.data[id-1];
 			dispatch(changeDetail(result.title, result.content));
 		}).catch(() => {
 			

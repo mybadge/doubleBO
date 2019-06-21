@@ -28,7 +28,7 @@ class App extends Component {
             <Header style={ {height: 56, background: 'white'} }>
               <BOHeader />
             </Header>
-            <Content style={{background: 'white', minHeight: 500, paddingLeft: 100, paddingRight: 100}}>
+            <Content style={{background: 'white', minHeight: 700, paddingLeft: 100, paddingRight: 100}}>
               <Route path='/' exact component={Home}></Route>
               {/* <Route path='/login' exact component={Login}></Route> */}
               <Route path='/write' exact component={Write}></Route>
@@ -42,7 +42,7 @@ class App extends Component {
             </Content>
 
             
-            <Footer style={{height:64, background: '#999', textAlign: 'center', color: 'white'}}>
+            <Footer style={{height:64, background: '#63B127', textAlign: 'center', color: 'white'}}>
                 double bo Design ©2019 Created by mybadge
             </Footer>
           </Layout>
