@@ -9,9 +9,9 @@ class BOHeader extends Component {
 
 
     shouldComponentUpdate(nextProps, nextState) {
-        const arr = new Array("/home","/product","/news","/hr","/about");
+        const arr = ["/home","/product","/news","/hr","/about"];
         const pathName = nextProps.history.location.pathname;
-        if (arr.indexOf(pathName)==-1) {
+        if (arr.indexOf(pathName)===-1) {
             return false
         } 
         return true;

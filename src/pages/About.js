@@ -8,8 +8,8 @@ const { Title, Paragraph, Text } = Typography;
 export default class About extends PureComponent {
     render() {
         return (
-          <div style={{margin:'20px 0px'}}>
-            <div style={{float:'left',marginRight: '20px' }}>
+          <div style={{margin:'20px auto', width:'960px'}}>
+            <div style={{float:'right',marginRight: '20px' }}>
               <img alt='img' style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
             </div>
             <Typography style={{lineHeight: '1.5em'}}>
