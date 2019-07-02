@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import BOHeader from './common/myheader';
-import Home from './pages/home';
-import Product from './pages/product/ProductAble'
+import Home from './pages/home/HomeAble';
+import ProductAble from './pages/product/ProductAble'
 import News from './pages/NewsAble'
 import Hr from './pages/HrAble'
 import About from './pages/AboutAble'
 import Detail from './pages/detail/loadable.js';
+import MyPdfViewerAble from './pages/home/MyPdfViewerAble';
+import ProductInfoAble from './pages/product/ProductInfoAble';
 // import Login from './pages/login';
-import Write from './pages/write';
+// import Write from './pages/write';
 
 import store from './store';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
-import MyPdfViewerAble from './pages/home/MyPdfViewerAble';
-import ProductInfoAble from './pages/product/ProductInfoAble';
+
 
 const { Header, Footer, Content } = Layout;
 
@@ -47,10 +48,10 @@ class App extends Component {
             <Content style={{background: 'white', minHeight: this.state.windowHeight}}>
               <Route path='/' exact component={Home}></Route>
               {/* <Route path='/login' exact component={Login}></Route> */}
-              <Route path='/write' exact component={Write}></Route>
+              {/* <Route path='/write' exact component={Write}></Route> */}
               <Route path='/detail/:id' exact component={Detail}></Route>
               <Route path='/home' exact component={Home}></Route>
-              <Route path='/product' exact component={Product}></Route>
+              <Route path='/product' exact component={ProductAble}></Route>
               <Route path='/news' exact component={News}></Route>
               <Route path='/hr' exact component={Hr}></Route>
               <Route path='/about' exact component={About}></Route>
