@@ -105,7 +105,7 @@ class Home extends PureComponent {
 					</TechnologyWrapper>
 					
 					<NewsListWrapper>
-						<h2>产品标准/<p>Least news</p></h2>
+						<h2>产品标准/<p>Product standard</p></h2>
 						<List
 							bordered
 							dataSource={newsList}

@@ -1,10 +1,11 @@
 import React from 'react';
 import Loadable from 'react-loadable';
+import LoadingView from './Base/LoadingView';
 
 const LoadableComponent = Loadable({
   loader: () => import('./About'),
   loading() {
-  	return <div style={{textAlign:'center'}}>正在加载...</div>
+  	return <LoadingView />
   }
 });
 
