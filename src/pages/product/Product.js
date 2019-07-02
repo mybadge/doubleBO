@@ -18,19 +18,16 @@ class Product extends PureComponent {
     render() {
       const { list } = this.props;
       return (
-        <div style={{display:'flex', flexWrap: 'wrap', margin: '20px 0px 20px 0px'}}>
+        <div style={{display:'flex', flexWrap: 'wrap', margin: '20px auto', maxWidth:'1040px', paddingLeft: '20px', paddingRight: '20px'}}>
           {
             list.map((item, index) => {
               return (
-                  <Link to='/detail/2'>
+                  <Link to='/productInfo' key={index}>
                     <Card
-                      key={index}
                       hoverable
-                      
                       style={{width: 240, marginLeft: 10, marginTop: 10 }}
                       cover={
                         <img alt="example" 
-                          // src="http://pic32.nipic.com/20130823/13339320_183302468194_2.jpg" 
                           src={item.get('imgUrl')}
                           style={{width: 240, height: 300}}
                         />}
@@ -45,36 +42,10 @@ class Product extends PureComponent {
                   </Link>
               );
             })
-            //this.gereryCard()
           }
         </div>
       );
     }
-
-    // gereryCard() {
-    //   const listData = [];
-    //   for (let i = 0; i < 23; i++) {
-    //     listData.push( 
-    //         <Card
-    //           key={i}
-    //           hoverable
-              
-    //           style={{ width: 240, marginLeft: 10, marginTop: 10 }}
-    //           cover={
-    //             <img alt="example" 
-    //                src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" 
-    //               //  scr={pro08}
-    //             />}
-    //         >
-    //           <Meta
-    //             title="香河苦瓜实验"
-    //             description="香河苦瓜实验-增大叶面积指数，提高光合能力，增加作物产量"
-    //           />
-    //         </Card>
-    //       )
-    //   }
-    //   return listData;
-    // }
 }
 
 const mapState = (state) => ({

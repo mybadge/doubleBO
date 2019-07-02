@@ -14,12 +14,28 @@ import Write from './pages/write';
 import store from './store';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
+import MyPdfViewerAble from './pages/home/MyPdfViewerAble';
+import ProductInfoAble from './pages/product/ProductInfoAble';
 
 const { Header, Footer, Content } = Layout;
 
-
-
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      windowHeight: 700
+    }
+  }
+
+  componentDidMount() {
+    
+    const height = this.getClientHeight();
+    this.setState({
+      windowHeight: height-56-64
+    })
+  }
+
   render() {    
     return (
     	<Provider store={store}>
@@ -28,7 +44,7 @@ class App extends Component {
             <Header style={ {height: 56, background: 'white'} }>
               <BOHeader />
             </Header>
-            <Content style={{background: 'white', minHeight: 700, paddingLeft: 100, paddingRight: 100}}>
+            <Content style={{background: 'white', minHeight: this.state.windowHeight}}>
               <Route path='/' exact component={Home}></Route>
               {/* <Route path='/login' exact component={Login}></Route> */}
               <Route path='/write' exact component={Write}></Route>
@@ -38,7 +54,8 @@ class App extends Component {
               <Route path='/news' exact component={News}></Route>
               <Route path='/hr' exact component={Hr}></Route>
               <Route path='/about' exact component={About}></Route>
-
+              <Route path='/pdfViewer' exact component={MyPdfViewerAble} />
+              <Route path='/productInfo' exact component={ProductInfoAble} />
             </Content>
 
             
@@ -49,6 +66,17 @@ class App extends Component {
       	</BrowserRouter>
       </Provider>
     );
+  }
+
+  getClientHeight(){
+    let clientHeight=0;
+    if(document.body.clientHeight&&document.documentElement.clientHeight) {
+      clientHeight = (document.body.clientHeight<document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
+    }
+    else {
+      clientHeight = (document.body.clientHeight>document.documentElement.clientHeight)?document.body.clientHeight:document.documentElement.clientHeight;
+    }
+    return clientHeight;
   }
 }
 

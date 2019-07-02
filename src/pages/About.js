@@ -1,19 +1,19 @@
 import React, { PureComponent } from 'react';
 
 import { Typography } from 'antd';
-//import { AboutBg } from './home/style';
+
 
 const { Title, Paragraph, Text } = Typography;
 
 export default class About extends PureComponent {
     render() {
         return (
-          <div style={{margin:'20px auto', width:'960px'}}>
+          <div style={{margin:'20px auto', maxWidth:'960px', paddingLeft: '20px', paddingRight: '20px'}}>
             <div style={{float:'right',marginRight: '20px' }}>
-              <img alt='img' style={{margin: '10px auto'}} src='/assets/compony_logo.png' />
+              <img alt='img' style={{margin: '20px auto 0px 10px'}} src='/assets/compony_logo.png' />
             </div>
-            <Typography style={{lineHeight: '1.5em'}}>
-              <Title level={2}>一、公司概况</Title>
+            <Typography style={{lineHeight: '1.8em', fontSize: 18, textAlign: 'justify'}}>
+              <Title level={2} style={{textAlign:'center'}}>一、公司概况</Title>
               <Paragraph>
                 天津双博农业科技有限公司成立于2015年5月6日，初期注册资本2000万元人民币，公司注册地为天津宝坻节能环保工业区海关大厦903室，营业执照注册号91120224328588995X；天津双博农业科技有限公司是一家从事以沼液、沼渣为介质的新型肥料的研发、生产和销售为一体的高新技术企业，主营：农业技术研发、技术推广、技术咨询、水溶肥料、微生物肥料及其他有机肥生产、销售；农作物种植、销售；沼气发电。天津双博农业科技有限公司拥有强大的科研队伍，与北京农林科学院、中国农业大学、天津市一轻局微生物研究所、三河市职教中心等科研所建立了密切的合作关系，开发、研制、生产、销售以沼液、沼渣为介质的系列生态肥料，走产、学、研相结合的发展道路，并取得良好的效果。
               </Paragraph>
@@ -43,7 +43,7 @@ export default class About extends PureComponent {
                 7、“沃▪双博”生态沼液肥（中草药类专用），产品执行标准Q12SBN0007-2017；
               </Paragraph>
               
-              <Title level={2}>二、“沃•双博”生态沼液肥</Title>
+              <Title level={2} style={{textAlign:'center'}}>二、“沃•双博”生态沼液肥</Title>
               <Paragraph>
                 “沃•双博”生态沼液肥系列产品以中粮肉食（天津）有限公司养殖一场产出的经过中温厌氧发酵后的沼液为介质，利用生物技术，按一定比例添加功能性复合菌组、活性酶等原料再进行第三次中温厌氧发酵，同时加入天然有机酸、中微量元素和植物生长所需的其他元素，由多种物质以物理、生化的方式复配加工生产，产品无任何毒副作用。<br/>“沃•双博”生态沼液肥系列产品以中粮肉食（天津）有限公司养殖一场产出的经过中温厌氧发酵后的沼液为介质，利用生物技术，按一定比例添加功能性复合菌组、活性酶等原料再进行第三次中温厌氧发酵，同时加入天然有机酸、中微量元素和植物生长所需的其他元素，由多种物质以物理、生化的方式复配加工生产，产品无任何毒副作用。“沃•双博”生态沼液肥系列产品的主要形态为水剂悬浊液、颜色为茶色或褐色；产品的主要成分为养分全面速效氮、磷、钾，其中氮部分主要为铵态氮，少部分为氨基酸及各种中微量元素、氨基酸类(不少于17种），糖类、吲哚乙酸、丁酸、赤霉素、细胞分裂素、B族维生素、核酸及各种酶等生物活性物质，另外还有植物抗冷物质(脯氨酸、亚油酸、黄腐酸)等天然激素，这些生物活性物质易于被种子吸收，能有效的激活种子胚乳中的酶原，增强酶的活性，促进发芽和刺激生长。
               </Paragraph>
@@ -68,7 +68,7 @@ export default class About extends PureComponent {
                       <li>微生物菌解磷、解钾、固氮；生态沼液肥中的生物蛋白酶，加快各种营养元素的转化。</li>
                   </ul>
                 </Paragraph>
-              <Title level={2}>三、生态沼液肥与其他肥料的区别</Title>
+              <Title level={2} style={{textAlign:'center'}}>三、生态沼液肥与其他肥料的区别</Title>
               <Title level={4}>1、“沃•双博”生态沼液肥与农家肥的区别</Title>
               <Paragraph>
                 <ul>
@@ -90,7 +90,15 @@ export default class About extends PureComponent {
               </Paragraph>
               <Title level={4}>3、生态物沼液肥与其他生物肥产品的区别</Title>
               <Paragraph>市面上的那些生物肥产品，基本上都是未经完全发酵的非原液的生物产品，含有致病菌及有害物质。因此，以沼液发酵原液为介质生产的“沃•双博”生态沼液肥系列产品，其菌群的实际密度、数量及施用效果，高于那些非原液生物肥产品。</Paragraph>
-            </Typography>
+
+              <Title level={2} style={{textAlign:'center'}}>四、联系我们</Title>
+              <Paragraph>
+                单位电话: 022-22458698
+              </Paragraph>
+              <Paragraph>
+                单位地址: 天津宝坻节能环保工业区海关大厦903室
+              </Paragraph>
+              </Typography>
 {/* <Title level={2}>时间线</Title>
 <Timeline mode="alternate" style={{marginTop: 50}}>
   <Timeline.Item>Create a services site 2015-09-01</Timeline.Item>
@@ -101,13 +109,7 @@ export default class About extends PureComponent {
   <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>Technical testing 2015-09-01</Timeline.Item>
 </Timeline> */}
 
-            <Title level={2}>联系我们</Title>
-            <Paragraph>
-              单位电话: 022-22458698
-            </Paragraph>
-            <Paragraph>
-              单位地址: 天津宝坻节能环保工业区海关大厦903室
-            </Paragraph>
+           
           </div>
           
         );

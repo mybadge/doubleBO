@@ -15,7 +15,7 @@ class Hr extends PureComponent {
           <List
             itemLayout="vertical"
             // split={false}
-            style={{margin: '10 10',}}
+            style={{margin: '10px auto', maxWidth: '960px', paddingLeft: '20px', paddingRight: '20px'}}
             header={<Title level={3}>最新招聘</Title>}
     
             dataSource={this.props.list}

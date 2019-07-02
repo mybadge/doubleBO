@@ -105,11 +105,16 @@ class Home extends PureComponent {
 					</TechnologyWrapper>
 					
 					<NewsListWrapper>
-						<h2>最新动态/<p>Least news</p></h2>
+						<h2>产品标准/<p>Least news</p></h2>
 						<List
 							bordered
 							dataSource={newsList}
-							renderItem={item => (<List.Item><Typography.Text>[{item.get('time')}]</Typography.Text> {item.get('title')}</List.Item>)}
+							renderItem={item => (
+									<Link to={{ pathname : '/pdfViewer' , state : {fileName: item.get('linlUrl')}}}>
+										<List.Item>{item.get('title')}</List.Item>
+									</Link>
+									)
+								}
 							/>
 						
 					</NewsListWrapper>

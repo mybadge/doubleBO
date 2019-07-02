@@ -42,29 +42,39 @@
 		}],
 		"newsList": [{
 			"id": 1,
-			"title": "我司与中粮肉食（天津）有限公司签订有机肥项目合作协议",
-			"time": "2015-06-28",
-			"linlUrl": "http://www.baidu.com"
+			"title": "“沃▪双博”生态沼液肥(叶菜类专用)，产品执行标准Q12SBN0001-2017",
+			"time": "",
+			"linlUrl": "assets/product_standard/Q12SBN0001-2017生态沼液肥-叶菜类专用.pdf"
 		}, {
 			"id": 2,
-			"title": "我司与中粮肉食（天津）有限公司签订有机肥项目合作协议",
+			"title": "“沃▪双博”生态沼液肥(瓜果蔬菜类专用)，产品执行标准Q12SBN0002-2017",
 			"time": "2019-05-15",
-			"linlUrl": "http://www.baidu.com"
+			"linlUrl": "assets/product_standard/Q12SBN0002-2017生态沼液肥-瓜果蔬菜类专用.pdf"
 		}, {
 			"id": 3,
-			"title": "我司与中粮肉食（天津）有限公司签订有机肥项目合作协议",
+			"title": "“沃▪双博”生态沼液肥(粮食类专用)，产品执行标准Q12SBN0003-2017",
 			"time": "2019-05-15",
-			"linlUrl": "http://www.baidu.com"
+			"linlUrl": "assets/product_standard/Q12SBN0003-2017生态沼液肥-粮食类专用.pdf"
 		}, {
 			"id": 4,
-			"title": "我司与中粮肉食（天津）有限公司签订有机肥项目合作协议",
+			"title": "“沃▪双博”生态沼液肥(园林绿化类专用)，产品执行标准Q12SBN0004-2017",
 			"time": "2019-05-15",
-			"linlUrl": "http://www.baidu.com"
+			"linlUrl": "assets/product_standard/Q12SBN0004-2017生态沼液-园林绿化类专用.pdf"
 		}, {
 			"id": 5,
-			"title": "我司与中粮肉食（天津）有限公司签订有机肥项目合作协议",
+			"title": "“沃▪双博”生态沼液肥(花卉类专用)，产品执行标准Q12SBN0005-2017",
 			"time": "2019-05-15",
-			"linlUrl": "http://www.baidu.com"
+			"linlUrl": "assets/product_standard/Q12SBN0005-2017生态沼液肥-花卉类专用.pdf"
+		}, {
+			"id": 6,
+			"title": "“沃▪双博”生态沼液肥(果树类专用)，产品执行标准Q12SBN0006-2017",
+			"time": "2019-05-15",
+			"linlUrl": "assets/product_standard/Q12SBN0006-2017生态沼液肥-果树类专用.pdf"
+		}, {
+			"id": 7,
+			"title": "“沃▪双博”生态沼液肥(中草药类专用)，产品执行标准Q12SBN0007-2017",
+			"time": "2019-05-15",
+			"linlUrl": "assets/product_standard/Q12SBN0007-2017生态沼液肥-中草药类专用.pdf"
 		}]
 	}
 }
