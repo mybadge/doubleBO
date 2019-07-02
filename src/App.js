@@ -42,7 +42,7 @@ class App extends Component {
     	<Provider store={store}>
       	<BrowserRouter>
           <Layout>
-            <Header style={ {height: 56, background: 'white'} }>
+            <Header style={ {height: 56, backgroundColor: 'white', padding: '0 0'} }>
               <BOHeader />
             </Header>
             <Content style={{background: 'white', minHeight: this.state.windowHeight}}>
