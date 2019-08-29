@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { actionCreators } from './store';
+import { actionCreators as detailActionCreators } from '../detail/store'
 import { Link } from 'react-router-dom';
 import Topic from './components/Topic';
 
@@ -159,6 +160,9 @@ const mapDispatch = (dispatch) => ({
 		}else {
 			dispatch(actionCreators.toggleTopShow(false))
 		}
+	},
+	getDetail() {
+		dispatch(detailActionCreators.getDetail(1));
 	}
 });
 
