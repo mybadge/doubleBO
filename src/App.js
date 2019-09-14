@@ -66,7 +66,9 @@ class App extends Component {
                   <Link to='/hr' style={{color: 'white',width:100}}>  人力资源  </Link>  |  
                   <Link to='/news' style={{color: 'white'}}>  新闻中心  </Link>  |  
                   <Link to='/product' style={{color: 'white'}}>  产品中心  </Link> <br/>
-                  版权所有 ©2019 天津双博农业科技有限公司 / 津ICP备19008092号-1 / 技术支持 mybadge
+                  <div style={{marginTop:1}}>
+                    版权所有 ©2019 天津双博农业科技有限公司 / 津ICP备19008092号-1 / 技术支持 mybadge
+                  </div>
               </div>
               
             </Footer>
