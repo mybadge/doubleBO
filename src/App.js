@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 import BOHeader from './common/myheader';
 import Home from './pages/home/HomeAble';
 import ProductAble from './pages/product/ProductAble'
@@ -61,7 +61,14 @@ class App extends Component {
 
             
             <Footer style={{height:64, background: '#63B127', textAlign: 'center', color: 'white'}}>
-                double bo Design ©2019 Created by mybadge
+              <div style={{flexDirection:'column', marginTop:-12}}>
+                  <Link to='/about' style={{color: 'white', width:100}}>  关于我们  </Link>  |  
+                  <Link to='/hr' style={{color: 'white',width:100}}>  人力资源  </Link>  |  
+                  <Link to='/news' style={{color: 'white'}}>  新闻中心  </Link>  |  
+                  <Link to='/product' style={{color: 'white'}}>  产品中心  </Link> <br/>
+                  版权所有 ©2019 天津双博农业科技有限公司 / 津ICP备19008092号-1 / 技术支持 mybadge
+              </div>
+              
             </Footer>
           </Layout>
       	</BrowserRouter>

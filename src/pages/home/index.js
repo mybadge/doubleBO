@@ -44,7 +44,8 @@ class Home extends PureComponent {
 						{
 							cycleList.map((item, index) => {
 								return (
-									<Link key={index} to={'/detail/' + item.get('id')}>
+									//  <Link key={index} to={'/detail/' + item.get('id')}>
+									<Link key={index} to='productInfo'>
 										<div><img className='banner-img' alt='alt' src={ item.get('imgUrl') } /></div>
 									</Link>
 								);
@@ -68,13 +69,16 @@ class Home extends PureComponent {
 					</div>
 					<ProductCenter>
 						<h2>产品中心/ <p>Product center</p></h2>
-						<img className='left' alt='' src='/assets/product_01.jpg' />
-						<div>
-							<img className='right1' alt='' src='/assets/product_02.jpg' />
-							<img className='right2' alt='' src='/assets/product_03.jpg' />
-							<img className='right3' alt='' src='/assets/product_04.jpg' />
-							<img className='right4' alt='' src='/assets/product_05.jpg' />
+						<div style={{flexDirection:'column'}}>
+							<img className='left' alt='' src='/assets/product_01.jpg' />
+							<div style={{flexDirection:'column', flexWrap:'wrap'}}>
+								<img className='right1' alt='' src='/assets/product_02.jpg' />
+								<img className='right2' alt='' src='/assets/product_03.jpg' />
+								<img className='right3' alt='' src='/assets/product_04.jpg' />
+								<img className='right4' alt='' src='/assets/product_05.jpg' />
+							</div>
 						</div>
+					
 						
 					</ProductCenter>
 
@@ -85,8 +89,8 @@ class Home extends PureComponent {
 								<dt>
 									<img className='imgLeft' alt='' src='/assets/product_06.jpg'/>
 									<div className='divRight'>
-										<Title level={4}>生态沼液肥（瓜果蔬菜类专用）</Title>
-										<Paragraph>
+										<Title style={{color:'white'}} level={4}>生态沼液肥（瓜果蔬菜类专用）</Title>
+										<Paragraph style={{color:'white'}}>
 											我司以科技服务农业，以质量求生存，以信誉求发展的宗旨，为我国的农业可持续发展和绿色有机食品基地的建设做出应有的贡献
 										</Paragraph>
 										
@@ -94,8 +98,8 @@ class Home extends PureComponent {
 								</dt>
 								<dt>
 									<div className='divLeft'>
-										<Title level={4}>生态沼液肥（叶菜类专用）</Title>
-											<Paragraph>
+										<Title style={{color:'white'}} level={4}>生态沼液肥（叶菜类专用）</Title>
+											<Paragraph style={{color:'white'}}>
 												我司与北京农林科学院、中国农业大学、天津市一轻局微生物研究所、三河市职教中心等科研所建立了密切的合作关系
 											</Paragraph>
 									</div>

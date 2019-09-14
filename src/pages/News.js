@@ -31,7 +31,7 @@ class News extends PureComponent {
                 <div>
                   <Text level={4}>【{item.get('time')}】 发布了新专利</Text>
                   {/* <Text style={{float: 'right', color: '#ccc', fontSize:14}}>{'日期:'+}</Text> */}
-                  <Button href={item.get('linkUrl')} target='_blank' style={{backgroundColor:'#96C301', color:'white', height: 28, float:'right'}}>Link</Button>
+                  <Button href={item.get('linkUrl')} target='_blank' style={{backgroundColor:'#96C301', color:'white', height: 28, float:'right'}}>查看</Button>
                 </div>
               }
               description={item.get('title') + ', ' + item.get('type')}

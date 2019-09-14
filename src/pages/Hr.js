@@ -35,7 +35,7 @@ class Hr extends PureComponent {
                   description={item.get('desc')}
                 >
                 </List.Item.Meta>
-                <Link to='/hr'><Button style={{backgroundColor:'#96C301', color:'white', height: 28}}>More</Button></Link>
+                <Link to='/hr'><Button style={{backgroundColor:'#96C301', color:'white', height: 28}}>查看更多</Button></Link>
                 {/* <Divider dashed /> */}
               </List.Item>
             )}
