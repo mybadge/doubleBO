@@ -16,7 +16,7 @@ import ProductInfoAble from './pages/product/ProductInfoAble';
 import store from './store';
 import { Layout } from 'antd';
 import 'antd/dist/antd.css';
-
+//import beian_icon from '/assets/beian_icon.jpg';
 
 const { Header, Footer, Content } = Layout;
 
@@ -67,7 +67,9 @@ class App extends Component {
                   <Link to='/news' style={{color: 'white'}}>  新闻中心  </Link>  |  
                   <Link to='/product' style={{color: 'white'}}>  产品中心  </Link> <br/>
                   <div style={{marginTop:1}}>
-                    版权所有 ©2019 天津双博农业科技有限公司 / 津ICP备19008092号-1 / 技术支持 mybadge
+                    版权所有 ©2019 天津双博农业科技有限公司 / 津ICP备19008092号-1 / 
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=12011502000505" style={{color:'white'}}><img src='/assets/beian_icon.png' alt='img' />津公网安备 12011502000505号</a>
+                       &nbsp;&nbsp;&nbsp;&nbsp;技术支持 mybadge
                   </div>
               </div>
               
