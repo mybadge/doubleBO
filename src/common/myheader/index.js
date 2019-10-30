@@ -9,7 +9,7 @@ class BOHeader extends Component {
 
 
     shouldComponentUpdate(nextProps, nextState) {
-        const arr = ["/home","/product","/news","/hr","/about"];
+        const arr = ["/home","/product","/news","/hr","/about","/cooperation"];
         const pathName = nextProps.history.location.pathname;
         if (arr.indexOf(pathName)===-1) {
             return false
@@ -35,6 +35,7 @@ class BOHeader extends Component {
                         <Menu.Item key="/news"><Link to='/news'>新闻中心</Link></Menu.Item>
                         <Menu.Item key="/hr"><Link to='/hr'>人力资源</Link></Menu.Item>
                         <Menu.Item key="/about"><Link to='/about'>关于我们</Link></Menu.Item>
+                        <Menu.Item key="/cooperation"><Link to='/cooperation'>合作方式</Link></Menu.Item>
                     </Menu>
                 </div>
             </Header>

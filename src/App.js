@@ -10,6 +10,7 @@ import About from './pages/AboutAble'
 import Detail from './pages/detail/loadable.js';
 import MyPdfViewerAble from './pages/home/MyPdfViewerAble';
 import ProductInfoAble from './pages/product/ProductInfoAble';
+import Cooperation from './pages/CooperationAble';
 // import Login from './pages/login';
 // import Write from './pages/write';
 
@@ -57,6 +58,7 @@ class App extends Component {
               <Route path='/about' exact component={About}></Route>
               <Route path='/pdfViewer' exact component={MyPdfViewerAble} />
               <Route path='/productInfo' exact component={ProductInfoAble} />
+              <Route path='/cooperation' exact component={Cooperation} />
             </Content>
 
             
