@@ -2,17 +2,11 @@
 	"success": true,
 	"data": {
 		"list": [{
-            "productId": 1,
-            "title": "花卉营养液",
-            "desc": "沃•双博生态沼液花卉营养液产品包装",
-            "imgUrl": "/assets/product/image44.jpeg",
-            "img2Url": "/assets/product/image44.jpeg"
-        },{
             "productId": 2,
             "title": "沼液肥产品包装",
-            "desc": "沃•双博生态沼液肥产品包装",
+            "desc": "沃•双博生态沼液肥产品包装和沃•双博生态沼液花卉营养液产品包装",
             "imgUrl": "/assets/product/image43.jpeg",
-            "img2Url": "/assets/product/image43.jpeg"
+            "img2Url": "/assets/product/image44.jpeg"
         },{
             "productId": 4,
             "title": "天津市水稻研究所",

@@ -27,12 +27,12 @@ class Product extends PureComponent {
                       hoverable
                       style={{width: 480, marginLeft: 10, marginTop: 10 }}
                       cover={
-                        <div style={{flexDirection:'row'}}><img alt="example" 
+                        <div style={{flexDirection:'row', padding:10}}><img alt="example" 
                           src={item.get('imgUrl')}
-                          style={{width: 235, height: 300}}
+                          style={{width: 225, height: 300}}
                         /><img alt="example" 
                         src={item.get('img2Url')}
-                        style={{width: 235, height: 300, marginRight:0}}
+                        style={{width: 225, height: 300, marginLeft:5}}
                       /></div>}
                         
                     >

@@ -13,7 +13,7 @@ export const HomeLeft = styled.div`
 	width: 960px;
 	.banner-img {
 		width: 960px;
-		height: 220px;
+		height: 280px;
 	}
 	.center {
 		padding-top: 30px;
@@ -51,7 +51,7 @@ export const TopicItem = styled.dl`
 
 	margin-left: 60px;
 	margin-bottom: 20px;
-	padding-left: 100px;
+	padding-left: 50px;
 	font-size: 14px;
 	color: #000;
 	text-align: center;

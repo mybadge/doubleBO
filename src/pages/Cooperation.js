@@ -10,7 +10,7 @@ export default class About extends PureComponent {
     return (
       <div style={{ margin: '20px auto', maxWidth: '960px', paddingLeft: '20px', paddingRight: '20px' }}>
         <Typography style={{ lineHeight: '1.8em', fontSize: 18, textAlign: 'justify' }}>
-          <Title level={2} style={{ textAlign: 'left' }}>一、选择我们</Title>
+          <Title level={2} style={{ textAlign: 'left' }}>一、为何选择我们</Title>
             <ul>
               <li>我们的宗旨是改良土壤、让土地恢复健康；为种植客户的产品增产、提质提供全方位的服务和周到的技术支持。</li>
               <li>我国是农业大国，改良土壤、改善环境及粮食安全问题已上升为基本国策，未来将是发展生态农业的时代。生态沼液肥项目意义明确，市场广泛，符合国家产业发展政策。中粮集团是国内农业领域的支柱企业，我公司与中粮集团为战略合作关系，是目前国内唯一一家与中粮合作生产生态沼液肥的企业。</li>
