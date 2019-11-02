@@ -25,12 +25,16 @@ class Product extends PureComponent {
                   <Link to='/productInfo' key={index}>
                     <Card
                       hoverable
-                      style={{width: 240, marginLeft: 10, marginTop: 10 }}
+                      style={{width: 480, marginLeft: 10, marginTop: 10 }}
                       cover={
-                        <img alt="example" 
+                        <div style={{flexDirection:'row'}}><img alt="example" 
                           src={item.get('imgUrl')}
-                          style={{width: 240, height: 300}}
-                        />}
+                          style={{width: 235, height: 300}}
+                        /><img alt="example" 
+                        src={item.get('img2Url')}
+                        style={{width: 235, height: 300, marginRight:0}}
+                      /></div>}
+                        
                     >
                       <Meta
                         title={item.get('title')}

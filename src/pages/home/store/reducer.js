@@ -37,6 +37,11 @@ const changeNewsData = (state, action) => {
 		patentList: fromJS(action.patentList)
 	})
 }
+const changePatentData=(state, action) =>{
+	return state.merge({
+		patentList: fromJS(action.patentList)
+	})
+}
 
 export default (state = defaultState, action) => {
 	switch(action.type) {
@@ -48,8 +53,10 @@ export default (state = defaultState, action) => {
 			return state.set('showScroll', action.show);
 		case constants.GET_HR_LIST:
 			return state.set('hrList', action.hrList);
-		case constants.GET_NEWS_PATENT_LIST:
+		case constants.GET_NEWS:
 			return changeNewsData(state, action)
+		case constants.GET_NEWS_PATENTS:
+			return changePatentData(state, action)
 		default:
 			return state;
 	}

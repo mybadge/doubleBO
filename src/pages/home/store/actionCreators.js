@@ -22,12 +22,16 @@ const getHrListData = (list) => ({
 	hrList: fromJS(list),
 })
 
-const getNewsListData = (result) => ({
-	type: constants.GET_NEWS_PATENT_LIST,
+const handleNewsListData = (result) => ({
+	type: constants.GET_NEWS,
 	newsList: result.newsList,
-	patentList: result.patentList
+	//patentList: result.patentList
 })
 
+const handlePatentData=(result)=>({
+	type: constants.GET_NEWS_PATENTS,
+	patentList: result.list
+})
 
 
 export const getHomeInfo = () => {
@@ -66,7 +70,16 @@ export const getNewsList = () => {
 	return (dispatch) => {
 		axios.get('/api/newsList.json').then((res) => {
 			const result = res.data.data;
-			dispatch(getNewsListData(result));
+			dispatch(handleNewsListData(result));
+		})
+	}
+}
+
+export const getPatentList = () => {
+	return (dispatch) => {
+		axios.get('/api/patent.json').then((res) => {
+			const result = res.data.data;
+			dispatch(handlePatentData(result));
 		})
 	}
 }

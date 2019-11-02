@@ -10,20 +10,20 @@ const { Title, Text } = Typography;
 
 
 class News extends PureComponent {
-    
+
   render() {
     return (
       <List
         itemLayout="vertical"
         // split={false}
-        style={{margin: '10px auto', maxWidth: '960px', paddingLeft: '20px', paddingRight: '20px'}}
+        style={{ margin: '10px auto', maxWidth: '960px', paddingLeft: '20px', paddingRight: '20px' }}
         header={<Title level={3}>新闻中心</Title>}
 
         dataSource={this.props.patentList}
         renderItem={item => (
           <List.Item
-            key={item.get('id')}
-            // style={{padding:'0 0'}}
+            key={item.get('detail')}
+          // style={{padding:'0 0'}}
           >
 
             <List.Item.Meta
@@ -31,13 +31,13 @@ class News extends PureComponent {
                 <div>
                   <Text level={4}>【{item.get('time')}】 发布了新专利</Text>
                   {/* <Text style={{float: 'right', color: '#ccc', fontSize:14}}>{'日期:'+}</Text> */}
-                  <Button href={item.get('linkUrl')} target='_blank' style={{backgroundColor:'#96C301', color:'white', height: 28, float:'right'}}>查看</Button>
+                  <Button href={item.get('href')} target='_blank' style={{ backgroundColor: '#96C301', color: 'white', height: 28, float: 'right' }}>查看</Button>
                 </div>
               }
-              description={item.get('title') + ', ' + item.get('type')}
+              description={item.get('title') + ', 专利号:'+ item.get('cnNum') + ',' + item.get('type')}
             >
             </List.Item.Meta>
-          
+
           </List.Item>
         )}
       />
@@ -45,7 +45,8 @@ class News extends PureComponent {
   }
 
   componentDidMount() {
-    this.props.getNewsList();
+    this.props.getNewsList()
+    this.props.getPatentList()
   }
 }
 
@@ -56,9 +57,12 @@ const mapState = (state) => ({
 })
 
 const mapDispatch = (dispatch) => ({
-	getNewsList() {
-		dispatch(actionCreators.getNewsList());
-	}
+  getNewsList() {
+    dispatch(actionCreators.getNewsList());
+  },
+  getPatentList() {
+    dispatch(actionCreators.getPatentList());
+  }
 });
 
 export default connect(mapState, mapDispatch)(News);
