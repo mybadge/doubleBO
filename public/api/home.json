@@ -62,45 +62,45 @@
 		"newsList": [
 			{
 				"id": 1,
-				"title": "“沃▪双博”生态沼液肥(叶菜类专用)，产品执行标准Q12SBN0001-2017",
+				"title": "“沃▪双博”生态沼液肥(园林绿化类专用)",
 				"time": "",
-				"linlUrl": "assets/product_standard/Q12SBN0001-2017生态沼液肥-叶菜类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-1园林绿化类专用.pdf"
 			},
 			{
 				"id": 2,
-				"title": "“沃▪双博”生态沼液肥(瓜果蔬菜类专用)，产品执行标准Q12SBN0002-2017",
+				"title": "“沃▪双博”生态沼液肥(花卉类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0002-2017生态沼液肥-瓜果蔬菜类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-2花卉类专用.pdf"
 			},
 			{
 				"id": 3,
-				"title": "“沃▪双博”生态沼液肥(粮食类专用)，产品执行标准Q12SBN0003-2017",
+				"title": "“沃▪双博”生态沼液肥(粮食类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0003-2017生态沼液肥-粮食类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-3粮食类专用.pdf"
 			},
 			{
 				"id": 4,
-				"title": "“沃▪双博”生态沼液肥(园林绿化类专用)，产品执行标准Q12SBN0004-2017",
+				"title": "“沃▪双博”生态沼液肥(中草药类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0004-2017生态沼液-园林绿化类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-4中草药类专用.pdf"
 			},
 			{
 				"id": 5,
-				"title": "“沃▪双博”生态沼液肥(花卉类专用)，产品执行标准Q12SBN0005-2017",
+				"title": "“沃▪双博”生态沼液肥(叶菜类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0005-2017生态沼液肥-花卉类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-5叶菜类专用.pdf"
 			},
 			{
 				"id": 6,
-				"title": "“沃▪双博”生态沼液肥(果树类专用)，产品执行标准Q12SBN0006-2017",
+				"title": "“沃▪双博”生态沼液肥(果树类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0006-2017生态沼液肥-果树类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-6果树类专用.pdf"
 			},
 			{
 				"id": 7,
-				"title": "“沃▪双博”生态沼液肥(中草药类专用)，产品执行标准Q12SBN0007-2017",
+				"title": "“沃▪双博”生态沼液肥(瓜果蔬菜类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/product_standard/Q12SBN0007-2017生态沼液肥-中草药类专用.pdf"
+				"linlUrl": "assets/pro_std/生态沼液肥-7瓜果蔬菜类专用.pdf"
 			}
 		]
 	}

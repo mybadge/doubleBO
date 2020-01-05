@@ -45,8 +45,8 @@ export default class About extends PureComponent {
             <Title level={4} style={{ textAlign: 'left' }}>4、推荐人合作方式</Title>
             <ul><li>推荐人每成功为公司推荐一位合作伙伴，即获得投资伙伴已实际支付投资金额10%的奖励。励（代金券+现金，代金券在重复消费时可以抵现金）；</li></ul>
           <Title level={2} style={{ textAlign: 'left' }}>三、欢迎加入</Title>
-          <Paragraph>因您的要求而改变财富电话：022-22458698、15030694688、15522725588</Paragraph>
-          <Paragraph>单位地址: 天津宝坻节能环保工业区海关大厦903室</Paragraph>
+          <Paragraph>因您的要求而改变财富电话：022-22458698、15030694688、16727415888</Paragraph>
+          <Paragraph>单位地址: 天津宝坻节能环保工业区清华紫荆802-804</Paragraph>
         </Typography>
       </div>
     );
