@@ -9,18 +9,18 @@ class BOHeader extends Component {
 
 
     shouldComponentUpdate(nextProps, nextState) {
-        const arr = ["/home","/product","/news","/hr","/about","/cooperation"];
+        const arr = ["/home", "/product", "/news", "/hr", "/about", "/cooperation"];
         const pathName = nextProps.history.location.pathname;
-        if (arr.indexOf(pathName)===-1) {
+        if (arr.indexOf(pathName) === -1) {
             return false
-        } 
+        }
         return true;
     }
 
     render() {
         return (
-            <Header style={{backgroundColor: 'white', padding: '0 0'}}>
-                <div style={{maxWidth: '960px', margin: '0px auto', paddingLeft: '20px' }}>
+            <Header style={{ backgroundColor: 'white', padding: '0 0' }}>
+                <div style={{ maxWidth: '960px', margin: '0px auto', paddingLeft: '20px' }}>
                     <Link to='/home'>
                         <Logo />
                     </Link>

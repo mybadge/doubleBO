@@ -204,7 +204,7 @@ export const ListItem = styled.div`
 	}
 `;
 
-export const ListInfo =	styled.div`
+export const ListInfo = styled.div`
 	width: 500px;
 	float: left;
 	.title {
