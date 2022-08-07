@@ -109,7 +109,7 @@ class Home extends PureComponent {
 						</TechonlogyCenter>
 					</TechnologyWrapper>
 
-					<NewsListWrapper>
+					{/* <NewsListWrapper>
 						<h2>产品标准/<p>Product standard</p></h2>
 						<List
 							bordered
@@ -121,8 +121,7 @@ class Home extends PureComponent {
 							)
 							}
 						/>
-
-					</NewsListWrapper>
+					</NewsListWrapper> */}
 
 					{/* <List /> */}
 				</HomeLeft>
