@@ -6,56 +6,56 @@
 				"id": 2,
 				"title": "产品介绍2",
 				"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
-				"imgUrl": "/assets/banner/banner3.jpg"
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/banner/banner3.jpg"
 			},
 			{
 				"id": 1,
 				"title": "产品介绍1",
 				"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
-				"imgUrl": "/assets/banner/banner2.jpg"
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/banner/banner2.jpg"
 			},
 			{
 				"id": 2,
 				"title": "产品介绍2",
 				"linkUrl": "https://xin.baidu.com/detail/compinfo?pid=xlTM-TogKuTwG1VW*4ilg*Hk5VPfKMn9WAmd&from=ps",
-				"imgUrl": "/assets/banner/banner3.jpg"
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/banner/banner3.jpg"
 			},
 			{
 				"id": 3,
 				"title": "产品介绍3",
 				"linkUrl": "https://www.baidu.com/s?wd=",
-				"imgUrl": "/assets/banner/banner4.jpg"
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/banner/banner4.jpg"
 			},
 			{
 				"id": 5,
 				"title": "产品介绍4",
 				"linkUrl": "http://www.baidu.com",
-				"imgUrl": "/assets/banner/shuangbo_banner.png"
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/banner/shuangbo_banner.png"
 			}
 		],
 		"topicList": [
 			{
 				"id": 1,
 				"title": "公司新闻",
-				"imgUrl": "/assets/news_01.jpg",
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/news_01.jpg",
 				"linkUrl": "/news"
 			},
 			{
 				"id": 2,
 				"title": "行业新闻",
-				"imgUrl": "/assets/news_02.jpg",
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/news_02.jpg",
 				"linkUrl": "/news"
 			},
 			{
 				"id": 3,
 				"title": "公司简介",
-				"imgUrl": "/assets/news_03.jpg",
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/news_03.jpg",
 				"linkUrl": "/about"
 			},
 			{
 				"id": 4,
 				"title": "合作方式",
-				"imgUrl": "/assets/mn_hezuo.png",
+				"imgUrl": "http://clientpkg.boom.cn/download/boassets/mn_hezuo.png",
 				"linkUrl": "/cooperation"
 			}
 		],
@@ -64,43 +64,43 @@
 				"id": 1,
 				"title": "“沃▪双博”生态沼液肥(园林绿化类专用)",
 				"time": "",
-				"linlUrl": "assets/pro_std/生态沼液肥-1园林绿化类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-1园林绿化类专用.pdf"
 			},
 			{
 				"id": 2,
 				"title": "“沃▪双博”生态沼液肥(花卉类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-2花卉类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-2花卉类专用.pdf"
 			},
 			{
 				"id": 3,
 				"title": "“沃▪双博”生态沼液肥(粮食类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-3粮食类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-3粮食类专用.pdf"
 			},
 			{
 				"id": 4,
 				"title": "“沃▪双博”生态沼液肥(中草药类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-4中草药类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-4中草药类专用.pdf"
 			},
 			{
 				"id": 5,
 				"title": "“沃▪双博”生态沼液肥(叶菜类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-5叶菜类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-5叶菜类专用.pdf"
 			},
 			{
 				"id": 6,
 				"title": "“沃▪双博”生态沼液肥(果树类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-6果树类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-6果树类专用.pdf"
 			},
 			{
 				"id": 7,
 				"title": "“沃▪双博”生态沼液肥(瓜果蔬菜类专用)",
 				"time": "2019-05-15",
-				"linlUrl": "assets/pro_std/生态沼液肥-7瓜果蔬菜类专用.pdf"
+				"linlUrl": "http://clientpkg.boom.cn/download/boassets/pro_std/生态沼液肥-7瓜果蔬菜类专用.pdf"
 			}
 		]
 	}
