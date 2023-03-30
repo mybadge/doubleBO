@@ -47,7 +47,7 @@ export default class About extends PureComponent {
           <Title level={2} style={{ textAlign: 'left' }}> 二、欢迎加入</Title>
           <Paragraph>因您的要求而改变财富电话：022-22458698、15030694688</Paragraph>
           <Paragraph>
-            单位地址：天津市宝坻区史各庄镇尚庄商业楼203-204室
+            单位地址：天津市宝坻区新开口镇经济发展服务中心5279室
           </Paragraph>
         </Typography>
       </div >

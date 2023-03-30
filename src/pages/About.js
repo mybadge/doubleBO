@@ -94,7 +94,7 @@ export default class About extends PureComponent {
             联系电话：022-22458698、15030694688
           </Paragraph>
           <Paragraph>
-            单位地址：天津市宝坻区史各庄镇尚庄商业楼203-204室
+            单位地址：天津市宝坻区新开口镇经济发展服务中心5279室
           </Paragraph>
         </Typography>
         {/* <Title level={2}>时间线</Title>
