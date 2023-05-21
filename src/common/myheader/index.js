@@ -35,7 +35,7 @@ class BOHeader extends Component {
                         <Menu.Item key="/news"><Link to='/news'>新闻中心</Link></Menu.Item>
                         <Menu.Item key="/hr"><Link to='/hr'>人力资源</Link></Menu.Item>
                         <Menu.Item key="/about"><Link to='/about'>关于我们</Link></Menu.Item>
-                        <Menu.Item key="/cooperation"><Link to='/cooperation'>合作方式</Link></Menu.Item>
+                        {/* <Menu.Item key="/cooperation"><Link to='/cooperation'>合作方式</Link></Menu.Item> */}
                     </Menu>
                 </div>
             </Header>

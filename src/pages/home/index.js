@@ -45,7 +45,7 @@ class Home extends PureComponent {
 							cycleList.map((item, index) => {
 								return (
 									//  <Link key={index} to={'/detail/' + item.get('id')}>
-									<Link key={index} to='productInfo'>
+									<Link key={index} to='./home'>
 										<div><img className='banner-img' alt='alt' src={item.get('imgUrl')} /></div>
 									</Link>
 								);

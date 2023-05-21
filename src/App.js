@@ -57,8 +57,8 @@ class App extends Component {
               <Route path='/hr' exact component={Hr}></Route>
               <Route path='/about' exact component={About}></Route>
               <Route path='/pdfViewer' exact component={MyPdfViewerAble} />
-              <Route path='/productInfo' exact component={ProductInfoAble} />
-              <Route path='/cooperation' exact component={Cooperation} />
+              {/* <Route path='/productInfo' exact component={ProductInfoAble} /> */}
+              {/* <Route path='/cooperation' exact component={Cooperation} /> */}
             </Content>
 
 
